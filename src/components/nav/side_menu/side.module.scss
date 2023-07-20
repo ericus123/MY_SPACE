@@ -1,0 +1,46 @@
+@import '../../../styles/variables.module.scss';
+
+.side_menu {
+  position: fixed;
+  height: 100vh;
+  z-index: 9999;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 70% auto;
+  overflow: hidden;
+
+  .left_side {
+    background-color: map-get($colors, 'dark');
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 1rem;
+    .top {
+      display: flex;
+      align-items: center;
+    }
+    .bottom {
+    }
+  }
+
+  .right_side {
+    background-color: map-get($colors, 'dark_background');
+    backdrop-filter: blur(2px);
+  }
+}
+
+.side_menu_light {
+  .left_side {
+    background-color: map-get($colors, 'light_mode');
+  }
+
+  .right_side {
+    background-color: map-get($colors, 'secondary');
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .side_menu {
+    display: none;
+  }
+}
