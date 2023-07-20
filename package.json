@@ -12,22 +12,36 @@
     "lint-staged": "lint-staged --config .lintstagedrc.js"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@rooks/use-outside-click": "^4.11.2",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "@urql/core": "^4.0.11",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "hamburger-react": "^2.5.0",
     "next": "13.4.10",
+    "next-urql": "^5.0.2",
+    "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-fade-in": "^2.0.1",
+    "react-icons": "^4.10.1",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
     "sass": "^1.64.0",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "urql": "^4.0.4"
   },
   "packageManager": "yarn@3.6.1",
   "devDependencies": {
     "@types/lint-staged": "^13.2.0",
+    "@types/nprogress": "^0.2.0",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.0",
-    "lint-staged": "^13.2.3"
+    "lint-staged": "^13.2.3",
+    "react-redux": "^8.1.1",
+    "redux-persist": "^6.0.0"
   }
 }

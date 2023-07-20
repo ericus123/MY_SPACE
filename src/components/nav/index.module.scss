@@ -1,0 +1,118 @@
+@import '../../styles/variables.module.scss';
+
+.container {
+  filter: none;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  z-index: 9;
+  max-width: 1800px;
+  width: calc(100% - 2rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .header {
+    display: grid;
+    grid-template-columns: 20rem auto 1rem 1rem;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background-color: transparent !important;
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      min-width: 30px;
+      max-width: 30px;
+      height: 25px;
+      max-height: 25px !important;
+      justify-content: space-between;
+      margin-left: auto;
+      cursor: pointer;
+      border: 2px solid red;
+      .line {
+        max-height: 5px;
+        min-height: 5px;
+        background-color: map-get($colors, 'primary');
+      }
+    }
+    .hamburger_open {
+      .line:nth-child(1) {
+        // display: none;
+      }
+      .line:nth-child(1) {
+        transform: rotate(45deg);
+        translate: -50%;
+      }
+      .line:nth-child(2) {
+        transform: rotate(-45deg);
+        transform: translateX(40deg);
+      }
+    }
+    .logo_container {
+      .logo {
+        font-family: 'Poppins';
+        font-size: 28px;
+        color: map-get($colors, 'primary');
+        cursor: pointer;
+      }
+    }
+    .theme {
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    .separator {
+      display: flex;
+      justify-content: center;
+      .icon {
+        justify-content: center;
+        color: map-get($colors, 'primary');
+      }
+    }
+  }
+}
+
+.light {
+  // background-color: map-get($colors, 'light_mode') !important;
+  .header {
+    .logo_container {
+      .logo {
+        color: map-get($colors, 'dark');
+      }
+    }
+  }
+}
+
+.top_layer {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  z-index: 8;
+  backdrop-filter: blur(2px);
+}
+.blur {
+  filter: blur(2px) !important;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    .header {
+      grid-template-columns: 10rem auto;
+      .separator {
+        display: none;
+      }
+      .menu_items_main {
+        display: none;
+      }
+
+      .theme_toogler {
+        display: none;
+      }
+    }
+  }
+}

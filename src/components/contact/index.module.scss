@@ -1,0 +1,53 @@
+@import '../../styles/variables.module.scss';
+.contact {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 1rem;
+  left: 1rem;
+  gap: 1rem;
+  z-index: 10;
+  .socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    align-items: center;
+    .account {
+      cursor: pointer;
+      .link {
+        text-decoration: none !important;
+      }
+    }
+  }
+  .resume {
+    margin-left: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .resume_btn {
+      border: 2px solid map-get($colors, 'secondary');
+      background-color: transparent;
+      height: 1.5rem;
+    }
+  }
+  .action {
+    border: 2px solid map-get($colors, 'primary');
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    .icon {
+      cursor: pointer;
+    }
+  }
+}
+
+.light {
+  .action {
+  }
+}

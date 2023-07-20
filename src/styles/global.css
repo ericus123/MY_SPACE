@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  position: relative;
+  height: auto;
+  width: 100%;
+  min-height: 100% !important;
+  font-family: "ft-light", "Nunito";
+  padding: 0% !important;
+  margin: 0% !important;
+  background-color: #1b2430;
+}
+
+.light {
+  background-color: rgb(241, 241, 241);
+}
+
+.code-title-container {
+  background-color: #1b2430;
+  padding: 7.5px;
+  color: rgb(210, 209, 209);
+  margin-bottom: -15px;
+}
