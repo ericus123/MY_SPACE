@@ -1,0 +1,175 @@
+@import '../../styles/variables.module.scss';
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .heading {
+    .title {
+      font-size: 24px;
+      font-family: 'Poppins';
+      font-weight: 600;
+      color: map-get($colors, 'dark_gray');
+    }
+  }
+  .content {
+    width: 100%;
+    min-height: 60vh;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 30% auto;
+      gap: 1rem;
+      .places {
+        border-left: 2px solid map-get($colors, 'dark_background');
+        position: relative;
+        padding: 2.5px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        height: 100%;
+        .place {
+          transition: 0.5s ease-in-out;
+          padding-left: 1rem;
+          margin: 0% 0% 0% 0;
+          cursor: pointer;
+          font-size: 14px;
+          line-height: 24px;
+          font-family: 'Poppins';
+          font-weight: 200;
+          color: map-get($colors, 'light_color');
+          &:hover {
+            transition: 0.3s ease-in-out;
+            // border-left: 5px solid map-get($colors, 'secondary');
+            color: map-get($colors, 'secondary');
+            font-weight: 500;
+          }
+        }
+        .active {
+          transition: 0.5s ease-in-out;
+          border-left: 5px solid map-get($colors, 'secondary');
+          color: map-get($colors, 'secondary');
+          font-weight: 500;
+        }
+      }
+      .role {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .name {
+          text-align: left;
+          font-family: 'Poppins';
+          font-size: 18px;
+          font-weight: 400;
+          margin: 0%;
+          color: map-get($colors, 'primary');
+        }
+        .timeline {
+          color: map-get($colors, 'dark_gray');
+          font-family: 'Poppins';
+          font-size: 12px;
+          margin: 0%;
+          font-weight: 300;
+          font-style: italic;
+        }
+        .responsibilities {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          .responsibility {
+            display: grid;
+            grid-template-columns: 10% auto;
+            align-items: center;
+            .text {
+              margin: 0%;
+              font-size: 12px;
+              line-height: 18px;
+              font-family: 'Poppins';
+              font-weight: 200;
+              color: map-get($colors, 'light_color');
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.light {
+  .heading {
+    .title {
+      color: map-get($colors, 'dark');
+    }
+  }
+  .content {
+    .wrapper {
+      .places {
+        border-left: 2px solid map-get($colors, 'primary');
+        .place {
+          color: map-get($colors, 'dark');
+          &:hover {
+            color: map-get($colors, 'secondary');
+          }
+        }
+        .active {
+          border-left: 5px solid map-get($colors, 'secondary');
+          color: map-get($colors, 'secondary');
+        }
+      }
+      .role {
+        .name {
+          color: map-get($colors, 'dark');
+        }
+        .timeline {
+          color: map-get($colors, 'dark');
+        }
+        .responsibilities {
+          .responsibility {
+            .text {
+              color: map-get($colors, 'dark');
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .experience {
+    margin-top: 10vh;
+
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    .content {
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .places {
+          border: none;
+          display: flex;
+          flex-direction: row;
+          overflow-x: scroll;
+          height: 2rem;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .place {
+            text-align: center;
+            white-space: nowrap;
+            padding-left: 0px;
+          }
+          .active {
+            border: none;
+            border-bottom: 2px solid map-get($colors, 'secondary');
+          }
+        }
+      }
+    }
+  }
+}
