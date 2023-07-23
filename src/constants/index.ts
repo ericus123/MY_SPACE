@@ -1,19 +1,23 @@
 export const navItems = [
     {
         name: "About",
-        key: "about"
+        key: "about",
+        link: "/"
     },
     {
         name: "Skills",
-        key: "skills"
+        key: "skills",
+        link: "/skills"
     },
     {
         name: "Experience",
-        key: "experience"
+        key: "experience",
+        link: "/experience"
     },
     {
         name: "Blog",
-        key: "blog"
+        key: "blog",
+        link: "/blog"
     }
 ]
 
