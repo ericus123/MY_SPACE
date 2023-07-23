@@ -1,0 +1,70 @@
+@import '../../../styles/variables.module.scss';
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid map-get($colors, 'dark_background');
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 3px;
+  .right {
+    margin-left: auto;
+  }
+  .left {
+    margin-right: auto;
+  }
+  .left,
+  .right {
+    border: 1.5px solid map-get($colors, 'dark_background');
+    height: 2rem;
+    width: auto;
+    min-width: 5rem;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: map-get($colors, 'dark_background') !important;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .disabled {
+    cursor: not-allowed !important;
+    border: 1px solid map-get($colors, 'light_color') !important;
+  }
+}
+
+.container_dark {
+  border: 2px solid map-get($colors, 'dark_gray') !important;
+  opacity: 0.8;
+  .right,
+  .left {
+    border: 2px solid map-get($colors, 'dark_gray') !important;
+    color: map-get($colors, 'dark_gray') !important;
+  }
+
+  .disabled {
+    border: 2px solid map-get($colors, 'dark_gray') !important;
+    color: map-get($colors, 'dark_gray') !important;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    height: 2.5rem;
+    max-width: calc(100vw - 100px);
+    .right,
+    .left {
+      height: 1.5rem;
+      font-size: 14px;
+    }
+  }
+}
