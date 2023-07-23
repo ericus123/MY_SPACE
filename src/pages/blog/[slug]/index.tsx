@@ -1,14 +1,17 @@
 import axios from "axios";
 import BlogDetails from "../../../components/blog/details/BlogDetails";
+import { BlogAttributes } from "../../../types/Blog";
 import BlogLayout from "../BlogLayout";
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async (context: {
+  params: { slug: any };
+}) => {
   const slug = context.params.slug;
   const url = process.env.NEXT_PUBLIC_GRAPHQL_URI;
 
   const headers = {
     "content-type": "application/json",
-    Authorization: `Bearer`
+    Authorization: `Bearer`,
   };
 
   const requestBody = {
@@ -43,17 +46,17 @@ export const getServerSideProps = async (context) => {
     variables: {
       filters: {
         slug: {
-          eq: slug
-        }
+          eq: slug,
+        },
       },
-      state: "LIVE"
-    }
+      state: "LIVE",
+    },
   };
   const options = {
     method: "POST",
     url,
     headers,
-    data: requestBody
+    data: requestBody,
   };
   const response = await axios(options);
 
@@ -61,8 +64,8 @@ export const getServerSideProps = async (context) => {
     return {
       redirect: {
         permanent: true,
-        destination: "/404"
-      }
+        destination: "/404",
+      },
     };
   }
 
@@ -74,66 +77,66 @@ export const getServerSideProps = async (context) => {
     {
       property: "og:image",
       content: image_url,
-      key: "ogimage"
+      key: "ogimage",
     },
     {
       property: "og:url",
       content: `${frontendURL}/blog/${blog.slug}`,
-      key: "ogurl"
+      key: "ogurl",
     },
     {
       property: "og:image:secure_url",
       content: `${frontendURL}/blog/${blog.slug}`,
-      key: "ogimagesecureurl"
+      key: "ogimagesecureurl",
     },
     {
       property: "og:title",
       content: blog.title,
-      key: "ogtitle"
+      key: "ogtitle",
     },
     {
       property: "og:description",
       content:
         blog?.content?.replace(/(<([^>]+)>)/gi, "").substr(0, 250) + "...",
-      key: "ogdesc"
+      key: "ogdesc",
     },
     {
       property: "og:type",
       content: "website",
-      key: "website"
+      key: "website",
     },
     {
       name: "twitter:card",
       content: "summary_large_image",
-      key: "twitter:card"
+      key: "twitter:card",
     },
     {
       name: "twitter:domain",
       content: "amanieric.com",
-      key: "twitter:domain"
+      key: "twitter:domain",
     },
     {
       name: "twitter:url",
       content: `${frontendURL}/blog/${blog.slug}`,
-      key: "twitter:card"
+      key: "twitter:card",
     },
     {
       name: "twitter:title",
       content: blog.title,
-      key: "twitter:title"
+      key: "twitter:title",
     },
 
     {
       name: "twitter:description",
       content:
         blog?.content?.replace(/(<([^>]+)>)/gi, "").substr(0, 250) + "...",
-      key: "twitter:description"
+      key: "twitter:description",
     },
     {
       name: "twitter:image",
       content: image_url,
-      key: "twitter:image"
-    }
+      key: "twitter:image",
+    },
   ];
 
   return {
@@ -141,11 +144,19 @@ export const getServerSideProps = async (context) => {
       blog: response.data.data.blogs.data[0].attributes,
       id: response.data.data.blogs.data[0].id,
       slug: slug,
-      meta
-    }
+      meta,
+    },
   };
 };
-const BlogPost = ({ blog, id, slug }) => {
+const BlogPost = ({
+  blog,
+  id,
+  slug,
+}: {
+  blog: BlogAttributes;
+  id: string;
+  slug: string;
+}) => {
   return (
     <BlogLayout>
       <BlogDetails blog={blog} id={id} />

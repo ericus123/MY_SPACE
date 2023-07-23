@@ -1,4 +1,4 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 .details {
   width: 100%;
@@ -15,9 +15,9 @@
       margin: 0%;
       text-align: center;
       // color: map-get($colors, 'light_color');
-      color: map-get($colors, 'dark_gray');
+      color: map-get($colors, "dark_gray");
       font-size: 32px;
-      font-family: 'Poppins' !important;
+      font-family: "Poppins" !important;
       font-weight: bolder;
     }
   }
@@ -40,15 +40,15 @@
     h5,
     h6 {
       word-wrap: break-word !important;
-      font-family: 'Book' !important;
-      color: map-get($colors, 'primary') !important;
+      font-family: "Book" !important;
+      color: map-get($colors, "primary") !important;
       white-space: initial;
     }
 
     p {
       word-wrap: break-word !important;
-      color: map-get($colors, 'dark_gray') !important;
-      font-family: 'Poppins' !important;
+      color: map-get($colors, "dark_gray") !important;
+      font-family: "Poppins" !important;
     }
   }
 
@@ -58,9 +58,8 @@
     .left {
       height: 3rem;
       width: 3rem;
+      position: relative;
       .image {
-        height: 2.5rem;
-        width: 2.5rem;
         border-radius: 50%;
       }
     }
@@ -70,17 +69,17 @@
       justify-content: center;
       .name {
         margin: 0%;
-        color: map-get($colors, 'secondary');
+        color: map-get($colors, "secondary");
         font-size: 16px;
         font-weight: 600;
-        font-family: 'Poppins';
+        font-family: "Poppins";
       }
       .timestamp {
         margin: 0%;
         font-size: 12px;
         font-weight: 400;
-        font-family: 'Poppins';
-        color: map-get($colors, 'dark_gray');
+        font-family: "Poppins";
+        color: map-get($colors, "dark_gray");
       }
     }
   }
@@ -102,10 +101,10 @@
     text-align: center;
     font-style: italic;
     font-size: smaller;
-    margin-left: 'auto';
-    margin-right: 'auto';
+    margin-left: "auto";
+    margin-right: "auto";
     margin: 0%;
-    color: map-get($colors, 'dark_gray');
+    color: map-get($colors, "dark_gray");
     // color: map-get($colors, 'dark') !important;
   }
 }
@@ -113,7 +112,7 @@
 .light {
   .heading {
     .title {
-      color: map-get($colors, 'dark') !important;
+      color: map-get($colors, "dark") !important;
     }
   }
 
@@ -123,12 +122,12 @@
         // color: map-get($colors, 'dark');
       }
       .timestamp {
-        color: map-get($colors, 'dark');
+        color: map-get($colors, "dark");
       }
     }
   }
   .content {
-    color: map-get($colors, 'dark') !important;
+    color: map-get($colors, "dark") !important;
     a {
       text-decoration: none !important;
     }
@@ -143,11 +142,11 @@
     h4,
     h5,
     h6 {
-      color: map-get($colors, 'dark') !important;
+      color: map-get($colors, "dark") !important;
     }
 
     p {
-      color: map-get($colors, 'dark') !important;
+      color: map-get($colors, "dark") !important;
     }
   }
 }

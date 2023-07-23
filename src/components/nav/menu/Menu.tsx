@@ -1,6 +1,12 @@
-import Hamburger from 'hamburger-react';
-import styles from './menu.module.scss';
-const Menu = ({ open, handleClick }: { open: boolean; handleClick }) => {
+import Hamburger from "hamburger-react";
+import styles from "./menu.module.scss";
+const Menu = ({
+  open,
+  handleClick,
+}: {
+  open: boolean;
+  handleClick: () => void;
+}) => {
   return (
     <div className={styles.menu}>
       <Hamburger toggled={open} toggle={handleClick} />

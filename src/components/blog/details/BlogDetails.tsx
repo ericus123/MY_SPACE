@@ -8,12 +8,12 @@ import { RootState } from "../../../redux/store";
 // import BlogComponent from './BlogComponent';
 import ReactHtmlParser from "react-html-parser";
 import readingTime from "reading-time";
-import { Blog } from "../../../types/Blog";
+import { BlogAttributes } from "../../../types/Blog";
 import Comments from "../comments/Comments";
 import SocialShare from "../share/SocialShare";
 import styles from "./index.module.scss";
 
-const BlogDetails = ({ blog, id }: { blog: Blog; id: string }) => {
+const BlogDetails = ({ blog, id }: { blog: BlogAttributes; id: string }) => {
   const updated = dateToTimeStamp(blog?.updatedAt);
 
   const created = dateToTimeStamp(blog?.createdAt);
@@ -37,8 +37,7 @@ const BlogDetails = ({ blog, id }: { blog: Blog; id: string }) => {
             className={styles.image}
             src={image}
             alt=""
-            width="100%"
-            height="100%"
+            fill
             objectFit="cover"
           />
         </div>

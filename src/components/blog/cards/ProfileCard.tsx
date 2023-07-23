@@ -21,9 +21,11 @@ const ProfileCard = () => {
           alt=""
           className={styles.image}
           priority
-          width="100%"
-          height="100%"
           objectFit="cover"
+          style={{
+            height: "5rem",
+            width: "5rem",
+          }}
         />
       </div>
       <div className={styles.details_container}>
