@@ -1,12 +1,13 @@
-import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import { navItems } from '../../../constants';
-import { RootState } from '../../../redux/store';
-import styles from './menuitems.module.scss';
+import Link from "next/link";
+import { useSelector } from "react-redux";
+import { navItems } from "../../../constants";
+import { RootState } from "../../../redux/store";
+import styles from "./menuitems.module.scss";
 
 interface INavItem {
   name: string;
   key: string;
+  link: string;
 }
 
 const MenuItems = ({
@@ -26,13 +27,13 @@ const MenuItems = ({
         !isDarkMode && styles.menu_items_light
       }`}
     >
-      {navItems?.map(({ name, key }: INavItem) => (
+      {navItems?.map(({ name, key, link }: INavItem) => (
         <Link
           rel="preload"
-          href={`/${(key === 'blog' && 'blog') || ''}`}
+          href={`/${link}`}
           style={{
-            textDecoration: 'none !important',
-            color: `${(isDarkMode && '#161b1e') || 'rgb(210, 209, 209)'}`,
+            textDecoration: "none",
+            color: `${(isDarkMode && "#161b1e") || "rgb(210, 209, 209)"}`,
           }}
           key={Math.random()}
           className={styles.it}
