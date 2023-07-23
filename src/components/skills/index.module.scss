@@ -1,0 +1,67 @@
+@import '../../styles/variables.module.scss';
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  .skill {
+    background-color: map-get($colors, 'dark_background');
+    border-radius: 6px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .icon_container {
+      background-color: map-get($colors, 'dark');
+      padding: 5px;
+      border-radius: 2px;
+      width: 1.25rem;
+      height: 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      margin: 0%;
+      font-size: 18px;
+      font-family: 'ft-medium';
+      color: map-get($colors, 'primary');
+    }
+    .description {
+      margin: 0%;
+      font-size: 12px;
+      font-family: 'Poppins';
+      font-weight: 300;
+      color: map-get($colors, 'primary') !important;
+    }
+  }
+}
+
+.light {
+  .skill {
+    background-color: map-get($colors, 'light_color');
+    .title {
+      color: map-get($colors, 'dark');
+    }
+    .description {
+      color: map-get($colors, 'dark') !important;
+    }
+    .icon_container {
+      background-color: map-get($colors, 'primary');
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    grid-template-columns: repeat(1, 1fr);
+    overflow: scroll;
+    height: 70vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
