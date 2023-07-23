@@ -330,6 +330,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/crypto-js@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@types/crypto-js@npm:4.1.1"
+  checksum: ea3d6a67b69f88baeb6af96004395903d2367a41bd5cd86306da23a44dd96589749495da50974a9b01bb5163c500764c8a33706831eade036bddae016417e3ea
+  languageName: node
+  linkType: hard
+
 "@types/domutils@npm:*":
   version: 1.7.4
   resolution: "@types/domutils@npm:1.7.4"
@@ -436,6 +443,15 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 36989f638201bfe2f4110b06c119180f6df9c0e13d7060481e82e7a745f81745a01ae543c478a25b61e0767cb52e82da2ad5b0dedacabf99339e523d06176705
+  languageName: node
+  linkType: hard
+
+"@types/redux-logger@npm:^3.0.9":
+  version: 3.0.9
+  resolution: "@types/redux-logger@npm:3.0.9"
+  dependencies:
+    redux: ^4.0.0
+  checksum: c41fdc09198fae2d62ff7d6bd029ccae1fed655e6a7abd40614a8db5d6e01adbe565881b2c8d398789804a48259e3399af3939f994a532c11904ba2021799275
   languageName: node
   linkType: hard
 
@@ -3125,6 +3141,7 @@ __metadata:
     "@giscus/react": ^2.3.0
     "@reduxjs/toolkit": ^1.9.5
     "@rooks/use-outside-click": ^4.11.2
+    "@types/crypto-js": ^4.1.1
     "@types/lint-staged": ^13.2.0
     "@types/luxon": ^3.3.1
     "@types/node": 20.4.2
@@ -3132,6 +3149,7 @@ __metadata:
     "@types/react": 18.2.15
     "@types/react-dom": 18.2.7
     "@types/react-html-parser": ^2.0.2
+    "@types/redux-logger": ^3.0.9
     "@urql/core": ^4.0.11
     axios: ^1.4.0
     crypto-js: ^4.1.1
@@ -3805,7 +3823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:^4.2.1":
+"redux@npm:^4.0.0, redux@npm:^4.2.1":
   version: 4.2.1
   resolution: "redux@npm:4.2.1"
   dependencies:

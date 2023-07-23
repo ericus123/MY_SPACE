@@ -1,10 +1,14 @@
-import { useEffect } from 'react';
+import { ClassAttributes, InsHTMLAttributes, JSX, useEffect } from "react";
 
-const AdBanner = (props) => {
+const AdBanner = (
+  props: JSX.IntrinsicAttributes &
+    ClassAttributes<HTMLModElement> &
+    InsHTMLAttributes<HTMLModElement>
+) => {
   useEffect(() => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
+    } catch (err: any) {
       throw new Error(err);
     }
   }, []);
@@ -13,8 +17,8 @@ const AdBanner = (props) => {
     <ins
       className="adsbygoogle adbanner-customize"
       style={{
-        display: 'block',
-        overflow: 'hidden',
+        display: "block",
+        overflow: "hidden",
       }}
       data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}
       {...props}

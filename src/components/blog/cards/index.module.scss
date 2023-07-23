@@ -1,4 +1,4 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 .blog {
   display: grid;
@@ -33,8 +33,8 @@
       .title {
         margin: 0%;
         font-size: 24px;
-        font-family: 'ft-book';
-        color: map-get($colors, 'primary');
+        font-family: "ft-book";
+        color: map-get($colors, "primary");
         line-height: 32px;
         &:hover {
           transition: 3s ease-in-out !important;
@@ -46,9 +46,9 @@
       .description {
         margin: 0%;
         font-size: 12px;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-weight: 300;
-        color: map-get($colors, 'primary') !important;
+        color: map-get($colors, "primary") !important;
       }
     }
 
@@ -59,7 +59,7 @@
       margin-top: auto;
 
       .tag {
-        background-color: map-get($colors, 'dark_background');
+        background-color: map-get($colors, "dark_background");
         border-radius: 2px;
         display: flex;
         justify-content: center;
@@ -68,7 +68,7 @@
         .text {
           margin: 0%;
           padding: 0 5px;
-          color: map-get($colors, 'primary');
+          color: map-get($colors, "primary");
         }
       }
     }
@@ -77,21 +77,21 @@
   .light {
     .title_container {
       .title {
-        color: map-get($colors, 'dark');
+        color: map-get($colors, "dark");
       }
     }
 
     .tags_container {
       .tag {
-        background-color: map-get($colors, 'dark');
-        color: map-get($colors, 'light_color');
+        background-color: map-get($colors, "dark");
+        color: map-get($colors, "light_color");
       }
     }
   }
 }
 
 .profile_card {
-  background-color: map-get($colors, 'dark_background');
+  background-color: map-get($colors, "dark_background");
   width: 20rem;
   height: 17.5rem;
   border-radius: 8px;
@@ -109,6 +109,7 @@
       border-radius: 10px;
       height: 7.5rem;
       width: 7.5rem;
+      // filter: grayscale(100%);
       border-radius: 50%;
     }
   }
@@ -119,16 +120,16 @@
     .title {
       margin: 0%;
       font-size: 22px;
-      font-family: 'ft-book';
-      color: map-get($colors, 'primary');
+      font-family: "ft-book";
+      color: map-get($colors, "primary");
       line-height: 32px;
       text-align: center;
     }
     .role {
       margin: 0%;
       font-size: 18px;
-      font-family: 'Poppins';
-      color: map-get($colors, 'secondary');
+      font-family: "Poppins";
+      color: map-get($colors, "secondary");
       line-height: 32px;
       text-align: center;
       font-weight: 500;
@@ -141,11 +142,11 @@
 }
 
 .light_profile_card {
-  background-color: map-get($colors, 'light_color');
+  background-color: map-get($colors, "light_color");
 
   .details_container {
     .title {
-      color: map-get($colors, 'dark');
+      color: map-get($colors, "dark");
     }
   }
 }

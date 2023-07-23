@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import BlogCards from "../../components/blog/cards/BlogCards";
 import { handleBlogsSearch, saveBlogs } from "../../redux/slices/blogSlice";
 import { RootState } from "../../redux/store";
+import { Blog, Blog as TBlog } from "../../types/Blog";
 import BlogLayout from "./BlogLayout";
 
 export const getServerSideProps = async () => {
   const url = process.env.NEXT_PUBLIC_GRAPHQL_URI;
 
   const headers = {
-    "content-type": "application/json"
+    "content-type": "application/json",
   };
   const requestBody = {
     query: `query ($state: PublicationState, $sort: [String]){
@@ -40,14 +41,14 @@ export const getServerSideProps = async () => {
     }`,
     variables: {
       state: "LIVE",
-      sort: ["createdAt:desc"]
-    }
+      sort: ["createdAt:desc"],
+    },
   };
   const options = {
     method: "POST",
     url,
     headers,
-    data: requestBody
+    data: requestBody,
   };
   const response = await axios(options);
 
@@ -58,76 +59,86 @@ export const getServerSideProps = async () => {
     {
       property: "og:image",
       content: pro_image,
-      key: "ogimage"
+      key: "ogimage",
     },
     {
       property: "og:url",
       content: `${frontendURL}/blog`,
-      key: "ogurl"
+      key: "ogurl",
     },
     {
       property: "og:image:secure_url",
       content: `${frontendURL}/blog`,
-      key: "ogimagesecureurl"
+      key: "ogimagesecureurl",
     },
     {
       property: "og:title",
       content: "AMANI Eric | Blog",
-      key: "ogtitle"
+      key: "ogtitle",
     },
     {
       property: "og:description",
       content:
         "Home for programming tutorials . I mainly use Node, Next, TypeScript and other technologies to help developers solve isssues they meet with and perform to the best of their abilities",
-      key: "ogdesc"
+      key: "ogdesc",
     },
     {
       property: "og:type",
       content: "website",
-      key: "website"
+      key: "website",
     },
     {
       name: "twitter:card",
       content: "summary_large_image",
-      key: "twitter:card"
+      key: "twitter:card",
     },
     {
       name: "twitter:domain",
       content: "amanieric.com",
-      key: "twitter:domain"
+      key: "twitter:domain",
     },
     {
       name: "twitter:url",
       content: `${frontendURL}/blog`,
-      key: "twitter:card"
+      key: "twitter:card",
     },
     {
       name: "twitter:title",
       content: "AMANI Eric | Blog",
-      key: "twitter:title"
+      key: "twitter:title",
     },
 
     {
       name: "twitter:description",
       content:
         "Home for programming tutorials. I mainly use Node, Next, TypeScript and other technologies to help developers solve isssues they meet with and perform to the best of their abilities",
-      key: "twitter:description"
+      key: "twitter:description",
     },
     {
       name: "twitter:image",
       content: pro_image,
-      key: "twitter:image"
-    }
+      key: "twitter:image",
+    },
   ];
   return {
     props: {
       res: response.data,
-      meta
-    }
+      meta,
+    },
   };
 };
 
-const Blog = ({ res }) => {
+const Blog = ({
+  res,
+}: {
+  res: {
+    data: {
+      blogs: {
+        data: TBlog[];
+      };
+    };
+  };
+}) => {
   const dispatch = useDispatch();
 
   const { blogs, searchBlogs, query } = useSelector(
@@ -142,7 +153,7 @@ const Blog = ({ res }) => {
 
   useEffect(() => {
     if (activeTags.length) {
-      const tagPosts = [];
+      const tagPosts: Blog[] = [];
 
       blogs.map((blog) => {
         const _tags = blog?.attributes?.tags;

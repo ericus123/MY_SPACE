@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
+import { BlogAttributes } from "../../../types/Blog";
 import styles from "./index.module.scss";
 
-const BlogCard = ({ blog }) => {
+const BlogCard = ({ blog }: { blog: BlogAttributes }) => {
   const { isDarkMode } = useSelector((state: RootState) => state.navBar);
 
   const image_url = `${process.env.NEXT_PUBLIC_FILES_DOMAIN}${blog.image.data.attributes.path}`;

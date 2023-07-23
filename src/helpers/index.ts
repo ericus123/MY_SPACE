@@ -1,14 +1,14 @@
 import crypto from "crypto-js";
 
 export const encryptData = (data: any) => {
-    return crypto.AES.encrypt(JSON.stringify(data), process.env.NEXT_PUBLIC_ENCRYPT_SECRET_TEXT).toString();
+    return crypto.AES.encrypt(JSON.stringify(data), `${process.env.NEXT_PUBLIC_ENCRYPT_SECRET_TEXT}`).toString();
 
 }
 
 
 
 export const decodeData = (ciphertext: string) => {
-    return crypto.AES.decrypt(ciphertext, process.env.NEXT_PUBLIC_ENCRYPT_SECRET_TEXT);
+    return crypto.AES.decrypt(ciphertext, `${process.env.NEXT_PUBLIC_ENCRYPT_SECRET_TEXT}`);
 }
 
 

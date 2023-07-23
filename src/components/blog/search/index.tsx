@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import {
   handleBlogsSearch,
   handleQueryChange,
-} from '../../../redux/slices/blogSlice';
-import { clearSearchTags } from '../../../redux/slices/searchSlice';
-import { RootState } from '../../../redux/store';
-import BlogSearchTags from './BlogSearchTags';
-import styles from './index.module.scss';
+} from "../../../redux/slices/blogSlice";
+import { clearSearchTags } from "../../../redux/slices/searchSlice";
+import { RootState } from "../../../redux/store";
+import BlogSearchTags from "./BlogSearchTags";
+import styles from "./index.module.scss";
 
 const SearchPanel = () => {
   const { activeTags } = useSelector((state: RootState) => state.search);
@@ -15,13 +15,13 @@ const SearchPanel = () => {
 
   const dispatch = useDispatch();
 
-  const handleSearchText = ({ target }) => {
+  const handleSearchText = ({ target }: { target: HTMLInputElement }) => {
     if (activeTags) {
       dispatch(clearSearchTags());
     }
     dispatch(handleQueryChange(target?.value));
     const data = blogs?.filter((blog) => {
-      const query = target.value?.trim().toLowerCase() || '';
+      const query = target.value?.trim().toLowerCase() || "";
 
       return blog?.attributes?.title?.trim().toLowerCase().includes(query);
     });

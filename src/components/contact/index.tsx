@@ -1,16 +1,16 @@
-import useOutsideClick from '@rooks/use-outside-click';
-import { useRef, useState } from 'react';
-import FadeIn from 'react-fade-in';
+import useOutsideClick from "@rooks/use-outside-click";
+import { useRef, useState } from "react";
+import FadeIn from "react-fade-in";
 import {
   FaEnvelope,
   FaGithub,
   FaLinkedinIn,
   FaTwitter,
-  FaUser
-} from 'react-icons/fa';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
-import styles from './index.module.scss';
+  FaUser,
+} from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import styles from "./index.module.scss";
 
 const Contact = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -20,7 +20,7 @@ const Contact = () => {
     setShow(!show);
   };
 
-  const ref = useRef(null);
+  const ref: any = useRef(null);
 
   const handleOutSideClick = () => {
     setShow(false);
@@ -59,10 +59,10 @@ const Contact = () => {
               href="https://github.com/ericus123"
               target="_blank"
               className={styles.link}
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: "none" }}
               rel="noopener noreferrer"
             >
-              <FaGithub color={(!isDarkMode && '#161b1e') || 'gray'} />
+              <FaGithub color={(!isDarkMode && "#161b1e") || "gray"} />
             </a>
           </div>
           <div className={styles.account}>
@@ -70,10 +70,10 @@ const Contact = () => {
               href="mailto:amaniericus@gmail.com"
               target="_blank"
               className={styles.link}
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: "none" }}
               rel="noopener noreferrer"
             >
-              <FaEnvelope color={(!isDarkMode && '#161b1e') || 'gray'} />
+              <FaEnvelope color={(!isDarkMode && "#161b1e") || "gray"} />
             </a>
           </div>
         </FadeIn>
@@ -81,7 +81,7 @@ const Contact = () => {
       <div className={styles.action} onClick={handleContact}>
         <FaUser
           className={styles.icon}
-          color={(!isDarkMode && '#161b1e') || '#c0c0c0'}
+          color={(!isDarkMode && "#161b1e") || "#c0c0c0"}
         />
       </div>
       <div className={styles.resume}>

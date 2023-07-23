@@ -46,10 +46,12 @@
   },
   "packageManager": "yarn@3.6.1",
   "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
     "@types/lint-staged": "^13.2.0",
     "@types/luxon": "^3.3.1",
     "@types/nprogress": "^0.2.0",
     "@types/react-html-parser": "^2.0.2",
+    "@types/redux-logger": "^3.0.9",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.3",
