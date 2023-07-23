@@ -9,6 +9,7 @@ import { RootState } from "../../../redux/store";
 import ReactHtmlParser from "react-html-parser";
 import readingTime from "reading-time";
 import { BlogAttributes } from "../../../types/Blog";
+import CustomImage from "../../images/CustomImage";
 import Comments from "../comments/Comments";
 import SocialShare from "../share/SocialShare";
 import styles from "./index.module.scss";
@@ -33,12 +34,14 @@ const BlogDetails = ({ blog, id }: { blog: BlogAttributes; id: string }) => {
       </div>
       <div className={styles.author}>
         <div className={styles.left}>
-          <Image
+          <CustomImage
             className={styles.image}
             src={image}
             alt=""
             fill
-            objectFit="cover"
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
         <div className={styles.right}>

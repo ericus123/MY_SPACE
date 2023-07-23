@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import { BlogAttributes } from "../../../types/Blog";
+import CustomImage from "../../images/CustomImage";
 import styles from "./index.module.scss";
 
 const BlogCard = ({ blog }: { blog: BlogAttributes }) => {
@@ -18,13 +18,15 @@ const BlogCard = ({ blog }: { blog: BlogAttributes }) => {
           key={Math.random()}
           style={{ textDecoration: "none" }}
         >
-          <Image
+          <CustomImage
             src={image_url}
             alt=""
-            className={styles.blog_image}
             priority
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{
+              objectFit: "cover",
+              borderRadius: "6px",
+            }}
           />
         </Link>
       </div>
