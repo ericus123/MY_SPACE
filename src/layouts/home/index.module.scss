@@ -1,0 +1,21 @@
+.home_container {
+  max-height: calc(100vh - 5.5rem);
+  // overflow: scroll;
+  max-width: 1000px;
+  margin: 5.5rem auto auto;
+  padding: 4rem auto;
+  max-width: 600px;
+  height: calc(100vh - 9rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .home_container {
+    max-width: 1000px;
+  }
+}
