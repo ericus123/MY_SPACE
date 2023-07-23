@@ -1,0 +1,36 @@
+.social_container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+  .t_icon,
+  .f_icon,
+  .l_icon {
+    color: white;
+  }
+
+  .t_icon_container,
+  .f_icon_container,
+  .l_icon_container {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .t_icon_container {
+    background: #00acee;
+  }
+  .f_icon_container {
+    background: #3b5998;
+  }
+  .l_icon_container {
+    background: #0072b1;
+  }
+}

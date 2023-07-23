@@ -1,0 +1,25 @@
+.blog_layout {
+  max-width: 1800px;
+  display: flex;
+  flex-direction: column;
+  margin: 7.5rem 0;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  .bottom_side {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: auto 20rem;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .blog_layout {
+    .bottom_side {
+      grid-template-columns: auto;
+    }
+  }
+}

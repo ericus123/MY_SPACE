@@ -1,0 +1,153 @@
+@import '../../../styles/variables.module.scss';
+
+.details {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+  .heading {
+    margin-bottom: 1rem;
+    .title {
+      margin: 0%;
+      text-align: center;
+      // color: map-get($colors, 'light_color');
+      color: map-get($colors, 'dark_gray');
+      font-size: 32px;
+      font-family: 'Poppins' !important;
+      font-weight: bolder;
+    }
+  }
+
+  .content {
+    max-width: calc(100vw - 32px);
+    color: white !important;
+    word-wrap: break-word !important;
+    a {
+      text-decoration: none !important;
+    }
+    img {
+      max-width: 600px;
+      object-fit: cover;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      word-wrap: break-word !important;
+      font-family: 'Book' !important;
+      color: map-get($colors, 'primary') !important;
+      white-space: initial;
+    }
+
+    p {
+      word-wrap: break-word !important;
+      color: map-get($colors, 'dark_gray') !important;
+      font-family: 'Poppins' !important;
+    }
+  }
+
+  .author {
+    display: flex;
+    gap: 0.5rem;
+    .left {
+      height: 3rem;
+      width: 3rem;
+      .image {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .name {
+        margin: 0%;
+        color: map-get($colors, 'secondary');
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Poppins';
+      }
+      .timestamp {
+        margin: 0%;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: 'Poppins';
+        color: map-get($colors, 'dark_gray');
+      }
+    }
+  }
+
+  .picture {
+    position: relative;
+    width: 100%;
+    height: 380px;
+
+    .image {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .caption {
+    a {
+      text-decoration: none !important;
+    }
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    margin-left: 'auto';
+    margin-right: 'auto';
+    margin: 0%;
+    color: map-get($colors, 'dark_gray');
+    // color: map-get($colors, 'dark') !important;
+  }
+}
+
+.light {
+  .heading {
+    .title {
+      color: map-get($colors, 'dark') !important;
+    }
+  }
+
+  .author {
+    .right {
+      .name {
+        // color: map-get($colors, 'dark');
+      }
+      .timestamp {
+        color: map-get($colors, 'dark');
+      }
+    }
+  }
+  .content {
+    color: map-get($colors, 'dark') !important;
+    a {
+      text-decoration: none !important;
+    }
+    img {
+      max-width: 100% !important;
+      object-fit: cover !important;
+      overflow: scroll !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: map-get($colors, 'dark') !important;
+    }
+
+    p {
+      color: map-get($colors, 'dark') !important;
+    }
+  }
+}
