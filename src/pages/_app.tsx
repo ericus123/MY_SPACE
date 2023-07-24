@@ -5,7 +5,7 @@ import { withUrqlClient } from "next-urql";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
-import { ClassAttributes, JSX, MetaHTMLAttributes, useEffect } from "react";
+import { useEffect } from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import AppLayout from "../layouts/app/AppLayout";
@@ -55,15 +55,6 @@ const App = ({ Component, pageProps }: any) => {
   return (
     <>
       <Head>
-        {meta.map(
-          (
-            og: JSX.IntrinsicAttributes &
-              ClassAttributes<HTMLMetaElement> &
-              MetaHTMLAttributes<HTMLMetaElement>
-          ) => (
-            <meta {...og} key={og.key} />
-          )
-        )}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 

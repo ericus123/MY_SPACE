@@ -1,5 +1,4 @@
-import profile_img from "../../public/assets/images/profile.jpg";
 
 export const images = {
-    profile: profile_img
+    profile: "https://files.amanieric.com/uploads/amani_1a04f899d8.webp"
 }

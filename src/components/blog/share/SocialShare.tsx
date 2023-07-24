@@ -1,11 +1,9 @@
-import { useRouter } from 'next/router';
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import styles from './index.module.scss';
+import { useRouter } from "next/router";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import styles from "./index.module.scss";
 
 const SocialShare = () => {
   const { asPath } = useRouter();
-
-  console.log(asPath);
 
   return (
     <div className={styles.social_container}>
