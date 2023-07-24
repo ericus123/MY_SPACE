@@ -1,10 +1,12 @@
 import axios from "axios";
+import Head from "next/head";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BlogCards from "../../components/blog/cards/BlogCards";
 import { handleBlogsSearch, saveBlogs } from "../../redux/slices/blogSlice";
 import { RootState } from "../../redux/store";
 import { Blog, Blog as TBlog } from "../../types/Blog";
+import { MetaData } from "../../types/MetaData";
 import BlogLayout from "./BlogLayout";
 
 export const getServerSideProps = async () => {
@@ -130,6 +132,7 @@ export const getServerSideProps = async () => {
 
 const Blog = ({
   res,
+  meta,
 }: {
   res: {
     data: {
@@ -138,6 +141,7 @@ const Blog = ({
       };
     };
   };
+  meta: MetaData[];
 }) => {
   const dispatch = useDispatch();
 
@@ -178,6 +182,13 @@ const Blog = ({
 
   return (
     <div>
+      <Head>
+        {/* Meta tags */}
+        <title>AMANI Eric | Blog</title>
+        {meta.map((tag, index) => (
+          <meta key={index} {...tag} />
+        ))}
+      </Head>
       <BlogLayout>
         <BlogCards blogs={searchBlogs} />
       </BlogLayout>

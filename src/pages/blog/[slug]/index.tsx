@@ -1,6 +1,8 @@
 import axios from "axios";
+import Head from "next/head";
 import BlogDetails from "../../../components/blog/details/BlogDetails";
 import { BlogAttributes } from "../../../types/Blog";
+import { MetaData } from "../../../types/MetaData";
 import BlogLayout from "../BlogLayout";
 
 export const getServerSideProps = async (context: {
@@ -72,72 +74,25 @@ export const getServerSideProps = async (context: {
   const blog = response.data.data.blogs.data[0].attributes;
   const frontendURL = process.env.NEXT_PUBLIC_FRONTEND_URL;
   const image_url = `${process.env.NEXT_PUBLIC_FILES_DOMAIN}${blog?.image?.data?.attributes?.path}`;
-
-  const meta = [
-    {
-      property: "og:image",
-      content: image_url,
-      key: "ogimage",
-    },
-    {
-      property: "og:url",
-      content: `${frontendURL}/blog/${blog.slug}`,
-      key: "ogurl",
-    },
-    {
-      property: "og:image:secure_url",
-      content: `${frontendURL}/blog/${blog.slug}`,
-      key: "ogimagesecureurl",
-    },
-    {
-      property: "og:title",
-      content: blog.title,
-      key: "ogtitle",
-    },
-    {
-      property: "og:description",
-      content:
+  const meta: MetaData = {
+    og: {
+      title: blog.title,
+      description:
         blog?.content?.replace(/(<([^>]+)>)/gi, "").substr(0, 250) + "...",
-      key: "ogdesc",
+      url: `${frontendURL}/blog/${slug}`,
+      image: image_url,
+      type: "website",
     },
-    {
-      property: "og:type",
-      content: "website",
-      key: "website",
-    },
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-      key: "twitter:card",
-    },
-    {
-      name: "twitter:domain",
-      content: "amanieric.com",
-      key: "twitter:domain",
-    },
-    {
-      name: "twitter:url",
-      content: `${frontendURL}/blog/${blog.slug}`,
-      key: "twitter:card",
-    },
-    {
-      name: "twitter:title",
-      content: blog.title,
-      key: "twitter:title",
-    },
-
-    {
-      name: "twitter:description",
-      content:
+    twitter: {
+      card: "summary_large_image",
+      domain: "https://amanieric.com",
+      title: blog.title,
+      description:
         blog?.content?.replace(/(<([^>]+)>)/gi, "").substr(0, 250) + "...",
-      key: "twitter:description",
+      url: `${frontendURL}/blog/${slug}`,
+      image: image_url,
     },
-    {
-      name: "twitter:image",
-      content: image_url,
-      key: "twitter:image",
-    },
-  ];
+  };
 
   return {
     props: {
@@ -148,19 +103,40 @@ export const getServerSideProps = async (context: {
     },
   };
 };
+
 const BlogPost = ({
   blog,
   id,
   slug,
+  meta,
 }: {
   blog: BlogAttributes;
   id: string;
   slug: string;
+  meta: MetaData;
 }) => {
   return (
-    <BlogLayout>
-      <BlogDetails blog={blog} id={id} />
-    </BlogLayout>
+    <>
+      <Head>
+        {/* Open Graph (OG) tags */}
+        <meta property="og:title" content={meta.og.title} />
+        <meta property="og:description" content={meta.og.description} />
+        <meta property="og:url" content={meta.og.url} />
+        <meta property="og:image" content={meta.og.image} />
+        <meta property="og:type" content={meta.og.type} />
+
+        {/* Twitter card tags */}
+        <meta name="twitter:card" content={meta.twitter.card} />
+        <meta name="twitter:domain" content={meta.twitter.domain} />
+        <meta name="twitter:title" content={meta.twitter.title} />
+        <meta name="twitter:description" content={meta.twitter.description} />
+        <meta name="twitter:url" content={meta.twitter.url} />
+        <meta name="twitter:image" content={meta.twitter.image} />
+      </Head>
+      <BlogLayout>
+        <BlogDetails blog={blog} id={id} />
+      </BlogLayout>
+    </>
   );
 };
 

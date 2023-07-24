@@ -41,19 +41,13 @@ const AboutPage = () => {
         </div>
         <div className={styles.connect}>
           <a
-            href="https://www.linkedin.com/in/amanieric"
+            style={{ textDecoration: "none" }}
+            href={process.env.NEXT_PUBLIC_RESUME}
+            rel="noopener noreferrer"
             target="_blank"
-            rel="noreferrer"
             className={styles.link}
           >
-            <a
-              style={{ textDecoration: "none" }}
-              href={process.env.NEXT_PUBLIC_RESUME}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <button className={styles.btn}>Resume</button>
-            </a>
+            <button className={styles.btn}>Resume</button>
           </a>
         </div>
       </div>
