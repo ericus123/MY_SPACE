@@ -2,7 +2,6 @@ import Image from "next/image";
 import FadeIn from "react-fade-in";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import image from "../../../../public/assets/images/profile.jpg";
 import { RootState } from "../../../redux/store";
 import styles from "./index.module.scss";
 
@@ -15,17 +14,21 @@ const ProfileCard = () => {
         !isDarkMode && styles.light_profile_card
       }`}
     >
-      <div className={styles.image_container}>
+      <div
+        className={styles.image_container}
+        style={{
+          height: "5rem",
+          width: "5rem",
+          position: "relative",
+        }}
+      >
         <Image
-          src={image}
+          src="https://files.amanieric.com/uploads/amani_1a04f899d8.webp"
           alt=""
           className={styles.image}
           priority
           objectFit="cover"
-          style={{
-            height: "5rem",
-            width: "5rem",
-          }}
+          fill
         />
       </div>
       <div className={styles.details_container}>
