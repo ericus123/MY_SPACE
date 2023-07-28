@@ -1,5 +1,6 @@
 import { Head, Html, Main, NextScript } from "next/document";
 import Script from "next/script";
+import GoogleAdsRecoveryMessage from "../components/ads/GoogleAdsRecoveryMessage";
 
 export default function Document() {
   return (
@@ -17,6 +18,7 @@ export default function Document() {
           strategy="lazyOnload"
           crossOrigin="anonymous"
         />
+        <GoogleAdsRecoveryMessage />
       </Head>
       <body>
         <Main />

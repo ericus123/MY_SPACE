@@ -1,0 +1,25 @@
+@import "../../../styles/variables.module.scss";
+
+.coffee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 2rem;
+}
+
+.coffee_text {
+  font-weight: 200;
+  font-size: 12px;
+  text-align: center;
+  color: map-get($colors, "light_color");
+  width: 75%;
+  font-family: "Poppins";
+}
+.light_coffee_text {
+  color: map-get($colors, "dark");
+}
+
+.coffee_btn {
+}
