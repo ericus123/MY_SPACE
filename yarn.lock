@@ -3312,6 +3312,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kofi-button@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "kofi-button@npm:1.1.1"
+  checksum: 052aab33ffed2b6966fdf94c959b5e26f933fa5e3991c737a9a7aaf4d359a16b3d1bc23404e424cb56eccc9adc3c90e02ee51fac74a1167da83d39b0870a54dd
+  languageName: node
+  linkType: hard
+
 "language-subtag-registry@npm:~0.3.2":
   version: 0.3.22
   resolution: "language-subtag-registry@npm:0.3.22"
@@ -3785,6 +3792,7 @@ __metadata:
     highlight.js: ^11.8.0
     highlightjs-copy: ^1.0.4
     husky: ^8.0.0
+    kofi-button: ^1.1.1
     lint-staged: ^13.2.3
     luxon: ^3.3.0
     moment: ^2.29.4

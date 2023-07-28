@@ -10,6 +10,7 @@ import ReactHtmlParser from "react-html-parser";
 import readingTime from "reading-time";
 import { BlogAttributes } from "../../../types/Blog";
 import CustomImage from "../../images/CustomImage";
+import BuyMeCoffee from "../coffee";
 import Comments from "../comments/Comments";
 import SocialShare from "../share/SocialShare";
 import styles from "./index.module.scss";
@@ -76,6 +77,7 @@ const BlogDetails = ({ blog, id }: { blog: BlogAttributes; id: string }) => {
       <div className={styles.content}>
         <BlogContent content={blog?.content} />
       </div>
+      <BuyMeCoffee />
       <SocialShare />
       {<Comments term={blog.title} />}
     </div>
