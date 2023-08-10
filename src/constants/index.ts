@@ -106,6 +106,18 @@ export const experience = [
     },
 
     {
+        place: "AC Group",
+        role: "Fullstack Developer - Apprenticeship",
+        timeline: "Jan 2021 - April 2021",
+        responsibilities: [
+            "Plan and execute full software development life cycles(SDLC) for each assigned project ",
+            "Conducting development tests",
+            "Responding to requests from the development team",
+            "Working on bug fixes",
+        ]
+    },
+
+    {
         place: "Andela",
         role: "Fullstack Developer",
         timeline: "June 2020 - Jun 2021",
