@@ -2,6 +2,7 @@ import Image from "next/image";
 import FadeIn from "react-fade-in";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { images } from "../../../constants/images";
 import { RootState } from "../../../redux/store";
 import styles from "./index.module.scss";
 
@@ -23,11 +24,14 @@ const ProfileCard = () => {
         }}
       >
         <Image
-          src="https://files.amanieric.com/uploads/amani_1a04f899d8.webp"
+          src={images.profile}
           alt=""
           className={styles.image}
           priority
-          objectFit="cover"
+          style={{
+            objectFit: "cover",
+            filter: "grayscale(100%)",
+          }}
           fill
         />
       </div>

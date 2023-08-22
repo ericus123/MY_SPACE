@@ -2,12 +2,11 @@ import { dateToTimeStamp } from "@/helpers";
 import Image from "next/image";
 import Moment from "react-moment";
 import { useSelector } from "react-redux";
-import image from "../../../../public/assets/images/profile.jpg";
 import BlogContent from "../../../pages/blog/[slug]/content";
 import { RootState } from "../../../redux/store";
 // import BlogComponent from './BlogComponent';
-import ReactHtmlParser from "react-html-parser";
 import readingTime from "reading-time";
+import { images } from "../../../constants/images";
 import { BlogAttributes } from "../../../types/Blog";
 import CustomImage from "../../images/CustomImage";
 import BuyMeCoffee from "../coffee";
@@ -37,10 +36,11 @@ const BlogDetails = ({ blog, id }: { blog: BlogAttributes; id: string }) => {
         <div className={styles.left}>
           <CustomImage
             className={styles.image}
-            src={image}
+            src={images.profile}
             alt=""
             fill
             style={{
+              filter: "grayscale(100%)",
               objectFit: "cover",
             }}
           />
@@ -70,7 +70,7 @@ const BlogDetails = ({ blog, id }: { blog: BlogAttributes; id: string }) => {
       </div>
       {img_caption && (
         <div className={styles.caption}>
-          {ReactHtmlParser(img_caption || "")}
+          {/* {ReactHtmlParser(img_caption || "")} */}
         </div>
       )}
 

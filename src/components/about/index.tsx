@@ -3,6 +3,7 @@ import FadeIn from "react-fade-in";
 import { useSelector } from "react-redux";
 import { images } from "../../constants/images";
 import { RootState } from "../../redux/store";
+import HandEmoji from "./Waving";
 import styles from "./index.module.scss";
 
 const AboutPage = () => {
@@ -27,7 +28,16 @@ const AboutPage = () => {
           />
         </div>
 
-        <h2 className={styles.introduction}> 👋🏾 Hi,I&apos;m Amani</h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: ".2rem",
+          }}
+        >
+          <HandEmoji className={styles.handEmoji} />
+          <h2 className={styles.introduction}> Hi,I&apos;m Amani</h2>
+        </div>
       </div>
       <div className={styles.details}>
         <div className={styles.role}>

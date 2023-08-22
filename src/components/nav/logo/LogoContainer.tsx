@@ -1,8 +1,10 @@
-import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
-import { handleActive } from '../../../redux/slices/navSlice';
-import { RootState } from '../../../redux/store';
-import styles from './logo.module.scss';
+import Image from "next/image";
+import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { images } from "../../../constants/images";
+import { handleActive } from "../../../redux/slices/navSlice";
+import { RootState } from "../../../redux/store";
+import styles from "./logo.module.scss";
 
 const LogoContainer = ({ customClass }: { customClass?: string }) => {
   const dispatch = useDispatch();
@@ -10,7 +12,7 @@ const LogoContainer = ({ customClass }: { customClass?: string }) => {
   const { isDarkMode } = useSelector((state: RootState) => state.navBar);
 
   const handleNavItem = (key: string) => {
-    dispatch(handleActive('about'));
+    dispatch(handleActive("about"));
   };
   return (
     <div
@@ -18,10 +20,17 @@ const LogoContainer = ({ customClass }: { customClass?: string }) => {
         !isDarkMode && styles.logo_container_light
       }`}
     >
-      <Link rel="preload" href={'/'} style={{ textDecoration: 'none' }}>
-        <h1 className={styles.logo} onClick={() => handleNavItem('about')}>
+      <Link rel="preload" href={"/"} style={{ textDecoration: "none" }}>
+        <Image
+          src={isDarkMode ? images.logo : images.logoDark}
+          width={90}
+          height={35}
+          alt="logo"
+          onClick={() => handleNavItem("about")}
+        />
+        {/* <h1 className={styles.logo} >
           Amani .
-        </h1>
+        </h1> */}
       </Link>
     </div>
   );

@@ -40,6 +40,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^0.8.2":
+  version: 0.8.8
+  resolution: "@emotion/is-prop-valid@npm:0.8.8"
+  dependencies:
+    "@emotion/memoize": 0.7.4
+  checksum: bb7ec6d48c572c540e24e47cc94fc2f8dec2d6a342ae97bc9c8b6388d9b8d283862672172a1bb62d335c02662afe6291e10c71e9b8642664a8b43416cdceffac
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:0.7.4":
+  version: 0.7.4
+  resolution: "@emotion/memoize@npm:0.7.4"
+  checksum: 4e3920d4ec95995657a37beb43d3f4b7d89fed6caa2b173a4c04d10482d089d5c3ea50bbc96618d918b020f26ed6e9c4026bbd45433566576c1f7b056c3271dc
+  languageName: node
+  linkType: hard
+
 "@eslint-community/eslint-utils@npm:^4.2.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -2332,6 +2348,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^10.16.4":
+  version: 10.16.4
+  resolution: "framer-motion@npm:10.16.4"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    tslib: ^2.4.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 57eb252f25a2c4ee14b024295c6a1162a53a05e0321bdb9c8a22ec266fbe777832823eaa0309e42854170fcde16c42915c6c5d0208b628fd000d6fab013c501f
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^8.1.0":
   version: 8.1.0
   resolution: "fs-extra@npm:8.1.0"
@@ -3788,6 +3825,7 @@ __metadata:
     eslint: 8.45.0
     eslint-config-next: 13.4.10
     eslint-config-prettier: ^8.8.0
+    framer-motion: ^10.16.4
     hamburger-react: ^2.5.0
     highlight.js: ^11.8.0
     highlightjs-copy: ^1.0.4
@@ -3808,6 +3846,7 @@ __metadata:
     react-icons: ^4.10.1
     react-moment: ^1.1.3
     react-redux: ^8.1.1
+    react-scroll-to-top: ^3.0.0
     reading-time: ^1.5.0
     redux: ^4.2.1
     redux-logger: ^3.0.6
@@ -4640,6 +4679,15 @@ __metadata:
     redux:
       optional: true
   checksum: 370676330727764d78f35e9c5a0ed0591d79482fe9b70fffcab4aa6bcccc6194e4f1ebd818b4b390351dea5557e70d3bd4d95d7a0ac9baa1f45d6bf2230ee713
+  languageName: node
+  linkType: hard
+
+"react-scroll-to-top@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "react-scroll-to-top@npm:3.0.0"
+  peerDependencies:
+    react: ^16.8.0 || 17.x || ^18
+  checksum: 5d7a38359a06e22d7cd8aa9832bdde6ec57ad0ff16b6e45e5f7d14ab1c04d403d46d0b6fd0f465a3d44b7d4b5c0d3dae2d8f95525877db4f9b927442b0b70f7d
   languageName: node
   linkType: hard
 

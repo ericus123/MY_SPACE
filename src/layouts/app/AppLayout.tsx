@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import Contact from '../../components/contact';
-import Footer from '../../components/footer';
-import NavBar from '../../components/nav/NavBar';
-import SideMenu from '../../components/nav/side_menu/SideMenu';
-import { RootState } from '../../redux/store';
-import styles from './index.module.scss';
+import Contact from "../../components/contact";
+import Footer from "../../components/footer";
+import NavBar from "../../components/nav/NavBar";
+import SideMenu from "../../components/nav/side_menu/SideMenu";
+import { RootState } from "../../redux/store";
+import styles from "./index.module.scss";
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   const { isDarkMode, isMenuOpen } = useSelector(
@@ -19,8 +19,6 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         <Contact />
         <div className={styles.wrapper}>
           <div className={styles.children}>{children}</div>
-
-          {/* <GoToTop /> */}
           <Footer />
         </div>
       </div>

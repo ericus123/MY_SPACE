@@ -1,5 +1,24 @@
 @import "../../styles/variables.module.scss";
 
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .container {
   font-size: clamp(16px, 1.2rem, 18px);
   display: flex;
@@ -12,6 +31,13 @@
     align-items: center;
     flex-direction: column;
     gap: 5px;
+    &:hover {
+      .handEmoji {
+        transform: rotate(45deg) scale(1.2);
+        transition: transform 0.3s ease;
+        animation: wave .5s linear infinite;
+      }
+    }
 
     .profile_img {
       height: 7.5rem !important;

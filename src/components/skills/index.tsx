@@ -1,6 +1,6 @@
 import FadeIn from 'react-fade-in';
 import { useSelector } from 'react-redux';
-import { skills } from '../../constants';
+import { skills } from "../../constants";
 import { RootState } from '../../redux/store';
 import styles from './index.module.scss';
 
