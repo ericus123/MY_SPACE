@@ -5,9 +5,10 @@ import { withUrqlClient } from "next-urql";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import AppLoader from "../components/loaders";
 import AppLayout from "../layouts/app/AppLayout";
 import { persistor, store } from "../redux/store";
 
@@ -21,6 +22,7 @@ const App = ({ Component, pageProps }: any) => {
   const router = useRouter();
   let window: Window & typeof globalThis;
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   useEffect(() => {
     const ads = document?.getElementsByClassName("adsbygoogle").length;
     for (let i = 0; i < ads; i++) {
@@ -35,9 +37,11 @@ const App = ({ Component, pageProps }: any) => {
   useEffect(() => {
     const handleStart = () => {
       NProgress.start();
+      setIsLoading(true);
     };
     const handleStop = () => {
       NProgress.done();
+      setIsLoading(false);
     };
 
     router.events.on("routeChangeStart", handleStart);
@@ -51,6 +55,8 @@ const App = ({ Component, pageProps }: any) => {
     };
   }, [router]);
 
+  const [isHydrating, setIsHydrating] = useState(true);
+
   const meta = pageProps?.meta || [];
   return (
     <>
@@ -60,9 +66,13 @@ const App = ({ Component, pageProps }: any) => {
 
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <AppLayout>
-            <Component {...pageProps} />
-          </AppLayout>
+          {isLoading ? (
+            <AppLoader />
+          ) : (
+            <AppLayout>
+              <Component {...pageProps} />
+            </AppLayout>
+          )}
         </PersistGate>
       </Provider>
     </>
