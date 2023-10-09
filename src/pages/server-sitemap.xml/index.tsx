@@ -1,7 +1,7 @@
 import axios from "axios";
-import { ISitemapField, getServerSideSitemap } from "next-sitemap";
+import { ISitemapField, getServerSideSitemapLegacy } from "next-sitemap";
 
-export const getServerSideProps = async (ctx: ISitemapField[]) => {
+export const getServerSideProps = async (ctx: any) => {
   const url = process.env.NEXT_PUBLIC_GRAPHQL_URI;
   const baseUrl = process.env.NEXT_PUBLIC_FRONTEND_URL;
 
@@ -41,15 +41,22 @@ export const getServerSideProps = async (ctx: ISitemapField[]) => {
     headers,
     data: requestBody,
   };
-  const response = await axios(options);
-  const fields = response.data.data.blogs.data.map(
-    (blog: { attributes: { slug: any; updatedAt: any } }) => ({
-      loc: `${baseUrl}/blog/${blog.attributes.slug}`,
-      lastmod: blog.attributes.updatedAt,
-    })
-  );
 
-  return getServerSideSitemap(ctx, fields);
+  const response = await axios(options);
+
+  const blogData = response.data.data.blogs.data;
+  let _fields: ISitemapField[] = [];
+  if (Array.isArray(blogData)) {
+    _fields = blogData.map(
+      (blog: { attributes: { slug: any; updatedAt: any } }) => ({
+        loc: `${baseUrl}/blog/${blog.attributes.slug}`,
+        lastmod: blog.attributes.updatedAt,
+        changefreq: "daily",
+      })
+    );
+  }
+
+  return getServerSideSitemapLegacy(ctx, _fields);
 };
 
 export default function Site() {}
