@@ -1,6 +1,7 @@
 import "@/styles/global.css";
 import "@/styles/highlight.scss";
 import { cacheExchange, fetchExchange } from "@urql/core";
+import { Analytics } from "@vercel/analytics/react";
 import { withUrqlClient } from "next-urql";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -11,7 +12,6 @@ import { PersistGate } from "redux-persist/integration/react";
 import AppLoader from "../components/loaders";
 import AppLayout from "../layouts/app/AppLayout";
 import { persistor, store } from "../redux/store";
-
 declare global {
   interface Window {
     adsbygoogle: any;
@@ -71,6 +71,7 @@ const App = ({ Component, pageProps }: any) => {
           ) : (
             <AppLayout>
               <Component {...pageProps} />
+              <Analytics/>
             </AppLayout>
           )}
         </PersistGate>
