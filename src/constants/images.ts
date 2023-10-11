@@ -1,6 +1,9 @@
+import profile from "/public/assets/images/profile.jpg";
+import profile_new from "/public/assets/images/profile_new.png";
 
 export const images = {
-  profile: "https://files.amanieric.com/uploads/amanieric_com_19222cf642.webp",
+  profile,
+  profile_new,
   logo: "/logo.svg",
   logoDark: "/logo-dark.svg",
 };

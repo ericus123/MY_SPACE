@@ -2,6 +2,7 @@ import useOutsideClick from "@rooks/use-outside-click";
 import { useRef, useState } from "react";
 import FadeIn from "react-fade-in";
 import {
+  FaDev,
   FaEnvelope,
   FaGithub,
   FaLinkedinIn,
@@ -56,6 +57,18 @@ const Contact = () => {
           </div>
           <div className={styles.account}>
             <a
+              href="https://dev.to/ericus123"
+              target="_blank"
+              className={styles.link}
+              style={{ textDecoration: "none" }}
+              rel="noopener noreferrer"
+            >
+              <FaDev color={(!isDarkMode && "#161b1e") || "gray"} />
+            </a>
+          </div>
+
+          <div className={styles.account}>
+            <a
               href="https://github.com/ericus123"
               target="_blank"
               className={styles.link}
@@ -65,6 +78,7 @@ const Contact = () => {
               <FaGithub color={(!isDarkMode && "#161b1e") || "gray"} />
             </a>
           </div>
+
           <div className={styles.account}>
             <a
               href="mailto:amaniericus@gmail.com"

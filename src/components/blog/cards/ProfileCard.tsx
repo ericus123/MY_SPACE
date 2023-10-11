@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FadeIn from "react-fade-in";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { images } from "../../../constants/images";
 import { RootState } from "../../../redux/store";
@@ -59,6 +59,17 @@ const ProfileCard = () => {
             rel="noopener noreferrer"
           >
             <FaLinkedinIn color="#0077b5" />
+          </a>
+        </div>
+        <div className={styles.account}>
+          <a
+            href="https://dev.to/ericus123"
+            target="_blank"
+            className={styles.link}
+            style={{ textDecoration: "none" }}
+            rel="noopener noreferrer"
+          >
+            <FaDev color={(!isDarkMode && "#161b1e") || "gray"} />
           </a>
         </div>
         <div className={styles.account}>

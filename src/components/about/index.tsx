@@ -19,7 +19,7 @@ const AboutPage = () => {
           }}
         >
           <Image
-            src={images.profile}
+            src={images.profile_new}
             alt=""
             className={styles.profile_img}
             priority
