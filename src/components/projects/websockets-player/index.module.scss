@@ -1,0 +1,66 @@
+@import "../../../styles/variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1800px;
+  overflow: scroll;
+}
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto 2rem auto;
+}
+.control {
+  margin: 0%;
+  font-size: 16px;
+  font-family: "ft-medium";
+  color: map-get($colors, "light_color");
+  line-height: 20px;
+}
+.control_light {
+  color: map-get($colors, "dark");
+}
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+.controlInputs {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  .input {
+    height: 15px;
+    border: 1px solid map-get($colors, "light_color");
+    outline: none;
+    background: none;
+    padding-left: 10px;
+    color: map-get($colors, "light_color");
+  }
+  .input_light {
+    color: map-get($colors, "dark");
+    border: 1px solid map-get($colors, "dark");
+  }
+  .checkBox {
+    height: 15px;
+  }
+}
+
+.reload {
+  width: 100px;
+  height: 25px;
+  border-radius: 3px;
+  color: map-get($colors, "light_color");
+  background-color: map-get($colors, "secondary");
+  border: none;
+  cursor: pointer;
+}
+
+.player {
+  width: calc(1800px - 600px);
+  height: 1000px;
+  position: relative;
+  display: flex;
+  overflow: auto;
+}

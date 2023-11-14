@@ -1,0 +1,73 @@
+@import "../../../styles/variables.module.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  .docContainer {
+    border-top: 1px dashed map-get($colors, "dark_gray");
+    padding-top: 2.5rem;
+  }
+
+  .githubContainer {
+    border-top: 1px dashed map-get($colors, "dark_gray");
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+    .github {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      gap: 0.5rem;
+      .text {
+        margin: 0%;
+        font-size: 16px;
+        font-family: "ft-book";
+        font-weight: 500;
+        color: map-get($colors, "light_color");
+        line-height: 32px;
+      }
+
+      .text_light {
+        color: map-get($colors, "dark");
+      }
+    }
+  }
+}
+
+.title {
+  margin: 0%;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.title_light {
+  color: map-get($colors, "dark") !important;
+}
+
+.title_dark {
+  color: map-get($colors, "light_color") !important;
+}
+
+.about {
+  margin: 0%;
+  font-size: 16px;
+  font-family: "ft-light";
+  line-height: 22px;
+}
+
+.about_light {
+  color: map-get($colors, "dark");
+}
+
+.about_dark {
+  color: map-get($colors, "primary");
+}
+.link {
+  color: map-get($colors, "secondary");
+  text-decoration: none;
+}

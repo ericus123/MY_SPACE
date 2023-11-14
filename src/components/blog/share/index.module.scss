@@ -1,3 +1,5 @@
+@import "../../../styles/variables.module.scss";
+
 .social_container {
   display: flex;
   justify-content: center;
@@ -6,7 +8,7 @@
   .t_icon,
   .f_icon,
   .l_icon {
-    color: white;
+    color: map-get($colors, "light_color");
   }
 
   .t_icon_container,
