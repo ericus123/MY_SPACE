@@ -1,6 +1,7 @@
-@import '../../styles/variables.module.scss';
+@import "../../styles/variables.module.scss";
 
 .footer {
+  transition: 0.5s ease-in-out;
   height: 3rem;
   position: absolute;
   left: 0;
@@ -9,14 +10,15 @@
   .text {
     font-size: 14px;
     text-align: center;
-    color: map-get($colors, 'dark_gray');
+    color: map-get($colors, "dark_gray");
     .icon {
       font-size: 10px;
     }
   }
 }
 .light {
+  transition: 0.5s ease-in-out;
   .text {
-    color: map-get($colors, 'dark');
+    color: map-get($colors, "dark");
   }
 }

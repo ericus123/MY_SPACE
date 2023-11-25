@@ -1,6 +1,7 @@
 @import "../../../styles/variables.module.scss";
 
 .details {
+  transition: 0.5s ease-in-out;
   width: 100%;
   max-width: 600px;
   display: flex;
@@ -110,6 +111,7 @@
 }
 
 .light {
+  transition: 0.5s ease-in-out;
   .heading {
     .title {
       color: map-get($colors, "dark") !important;

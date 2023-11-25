@@ -12,7 +12,12 @@ const BlogSearchTags = () => {
     dispatch(handleSearchTag(tag));
   };
   return (
-    <div className={`${isDarkMode && styles.dark}`}>
+    <div
+      className={`${isDarkMode && styles.dark}`}
+      style={{
+        transition: ".5s ease-in-out",
+      }}
+    >
       <div className={`${styles.tags} `}>
         {[
           "CSS",

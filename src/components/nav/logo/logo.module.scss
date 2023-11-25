@@ -1,16 +1,18 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 .logo_container {
+  transition: 0.5s ease-in-out;
   .logo {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 28px;
-    color: map-get($colors, 'primary');
+    color: map-get($colors, "primary");
     cursor: pointer;
   }
 }
 
 .logo_container_light {
+  transition: 0.5s ease-in-out;
   .logo {
-    color: map-get($colors, 'dark');
+    color: map-get($colors, "dark");
   }
 }

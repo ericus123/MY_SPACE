@@ -37,6 +37,7 @@ const MenuItems = ({
           style={{
             textDecoration: "none",
             color: `${(isDarkMode && "#161b1e") || "rgb(210, 209, 209)"}`,
+            transition: ".5s ease-in-out",
           }}
           key={Math.random()}
           className={styles.it}

@@ -37,6 +37,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
           right: "20px",
           bottom: "20px",
           background: isDarkMode ? "gray" : "#161b1e",
+          transition: ".5s ease-in-out",
         }}
         color={!isDarkMode ? "gray" : "#161b1e"}
         top={800}

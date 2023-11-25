@@ -22,6 +22,7 @@
       padding: 0.5rem;
       gap: 0.5rem;
       .text {
+        transition: 0.5s ease-in-out;
         margin: 0%;
         font-size: 16px;
         font-family: "ft-book";
@@ -31,6 +32,7 @@
       }
 
       .text_light {
+        transition: 0.5s ease-in-out;
         color: map-get($colors, "dark");
       }
     }
@@ -46,10 +48,12 @@
 }
 
 .title_light {
+  transition: 0.5s ease-in-out;
   color: map-get($colors, "dark") !important;
 }
 
 .title_dark {
+  transition: 0.5s ease-in-out;
   color: map-get($colors, "light_color") !important;
 }
 
@@ -61,10 +65,12 @@
 }
 
 .about_light {
+  transition: 0.5s ease-in-out;
   color: map-get($colors, "dark");
 }
 
 .about_dark {
+  transition: 0.5s ease-in-out;
   color: map-get($colors, "primary");
 }
 .link {

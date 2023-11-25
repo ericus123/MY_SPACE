@@ -26,6 +26,9 @@ const LogoContainer = ({ customClass }: { customClass?: string }) => {
           width={90}
           height={35}
           alt="logo"
+          style={{
+            transition: ".5s ease-in-out",
+          }}
           onClick={() => handleNavItem("about")}
         />
         {/* <h1 className={styles.logo} >

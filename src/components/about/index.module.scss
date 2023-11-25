@@ -1,6 +1,5 @@
 @import "../../styles/variables.module.scss";
 
-
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -20,6 +19,7 @@
 }
 
 .container {
+  transition: 0.5s ease-in-out;
   font-size: clamp(16px, 1.2rem, 18px);
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
       .handEmoji {
         transform: rotate(45deg) scale(1.2);
         transition: transform 0.3s ease;
-        animation: wave .5s linear infinite;
+        animation: wave 0.5s linear infinite;
       }
     }
 
@@ -123,10 +123,10 @@
 
 /* Light mode styles */
 .light {
+  transition: 0.5s ease-in-out;
   .connect {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 
     .link {
       color: map-get($colors, "dark");

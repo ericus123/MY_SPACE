@@ -1,6 +1,7 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 .menu_items {
+  transition: 0.5s ease-in-out;
   display: flex;
   align-items: center;
   gap: 25px;
@@ -10,12 +11,12 @@
   text-decoration: none;
   .item {
     cursor: pointer;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 300;
     font-size: 14px;
     margin: 0%;
-    color: map-get($colors, 'primary') !important;
-    
+    color: map-get($colors, "primary") !important;
+
     &:hover {
       opacity: 0.6;
       transition: 0.3s ease-in-out;
@@ -27,9 +28,10 @@
 }
 
 .menu_items_light {
+  transition: 0.5s ease-in-out;
   text-decoration: none;
   .item {
-    color: map-get($colors, 'dark') !important;
+    color: map-get($colors, "dark") !important;
     text-decoration: none;
     &:hover {
       opacity: 0.6;

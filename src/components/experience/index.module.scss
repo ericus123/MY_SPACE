@@ -1,6 +1,7 @@
-@import '../../styles/variables.module.scss';
+@import "../../styles/variables.module.scss";
 
 .experience {
+  transition: 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,9 +9,9 @@
   .heading {
     .title {
       font-size: 24px;
-      font-family: 'Poppins';
+      font-family: "Poppins";
       font-weight: 600;
-      color: map-get($colors, 'dark_gray');
+      color: map-get($colors, "dark_gray");
     }
   }
   .content {
@@ -21,7 +22,7 @@
       grid-template-columns: 30% auto;
       gap: 1rem;
       .places {
-        border-left: 2px solid map-get($colors, 'dark_background');
+        border-left: 2px solid map-get($colors, "dark_background");
         position: relative;
         padding: 2.5px 0px;
         display: flex;
@@ -36,20 +37,20 @@
           cursor: pointer;
           font-size: 14px;
           line-height: 24px;
-          font-family: 'Poppins';
+          font-family: "Poppins";
           font-weight: 200;
-          color: map-get($colors, 'light_color');
+          color: map-get($colors, "light_color");
           &:hover {
             transition: 0.3s ease-in-out;
             // border-left: 5px solid map-get($colors, 'secondary');
-            color: map-get($colors, 'secondary');
+            color: map-get($colors, "secondary");
             font-weight: 500;
           }
         }
         .active {
           transition: 0.5s ease-in-out;
-          border-left: 5px solid map-get($colors, 'secondary');
-          color: map-get($colors, 'secondary');
+          border-left: 5px solid map-get($colors, "secondary");
+          color: map-get($colors, "secondary");
           font-weight: 500;
         }
       }
@@ -59,15 +60,15 @@
         gap: 0.5rem;
         .name {
           text-align: left;
-          font-family: 'Poppins';
+          font-family: "Poppins";
           font-size: 18px;
           font-weight: 400;
           margin: 0%;
-          color: map-get($colors, 'primary');
+          color: map-get($colors, "primary");
         }
         .timeline {
-          color: map-get($colors, 'dark_gray');
-          font-family: 'Poppins';
+          color: map-get($colors, "dark_gray");
+          font-family: "Poppins";
           font-size: 12px;
           margin: 0%;
           font-weight: 300;
@@ -85,9 +86,9 @@
               margin: 0%;
               font-size: 12px;
               line-height: 18px;
-              font-family: 'Poppins';
+              font-family: "Poppins";
               font-weight: 200;
-              color: map-get($colors, 'light_color');
+              color: map-get($colors, "light_color");
             }
           }
         }
@@ -97,37 +98,38 @@
 }
 
 .light {
+  transition: 0.5s ease-in-out;
   .heading {
     .title {
-      color: map-get($colors, 'dark');
+      color: map-get($colors, "dark");
     }
   }
   .content {
     .wrapper {
       .places {
-        border-left: 2px solid map-get($colors, 'primary');
+        border-left: 2px solid map-get($colors, "primary");
         .place {
-          color: map-get($colors, 'dark');
+          color: map-get($colors, "dark");
           &:hover {
-            color: map-get($colors, 'secondary');
+            color: map-get($colors, "secondary");
           }
         }
         .active {
-          border-left: 5px solid map-get($colors, 'secondary');
-          color: map-get($colors, 'secondary');
+          border-left: 5px solid map-get($colors, "secondary");
+          color: map-get($colors, "secondary");
         }
       }
       .role {
         .name {
-          color: map-get($colors, 'dark');
+          color: map-get($colors, "dark");
         }
         .timeline {
-          color: map-get($colors, 'dark');
+          color: map-get($colors, "dark");
         }
         .responsibilities {
           .responsibility {
             .text {
-              color: map-get($colors, 'dark');
+              color: map-get($colors, "dark");
             }
           }
         }
@@ -166,7 +168,7 @@
           }
           .active {
             border: none;
-            border-bottom: 2px solid map-get($colors, 'secondary');
+            border-bottom: 2px solid map-get($colors, "secondary");
           }
         }
       }

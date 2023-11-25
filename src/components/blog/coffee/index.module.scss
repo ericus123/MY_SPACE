@@ -10,6 +10,7 @@
 }
 
 .coffee_text {
+  transition: 0.5s ease-in-out;
   font-weight: 200;
   font-size: 12px;
   text-align: center;
@@ -18,6 +19,7 @@
   font-family: "Poppins";
 }
 .light_coffee_text {
+  transition: 0.5s ease-in-out;
   color: map-get($colors, "dark");
 }
 

@@ -1,6 +1,7 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 .side_menu {
+  transition: 0.5s ease-in-out;
   position: fixed;
   height: 100vh;
   z-index: 9999;
@@ -10,7 +11,7 @@
   overflow: hidden;
 
   .left_side {
-    background-color: map-get($colors, 'dark');
+    background-color: map-get($colors, "dark");
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -24,18 +25,19 @@
   }
 
   .right_side {
-    background-color: map-get($colors, 'dark_background');
+    background-color: map-get($colors, "dark_background");
     backdrop-filter: blur(2px);
   }
 }
 
 .side_menu_light {
+  transition: 0.5s ease-in-out;
   .left_side {
-    background-color: map-get($colors, 'light_mode');
+    background-color: map-get($colors, "light_mode");
   }
 
   .right_side {
-    background-color: map-get($colors, 'secondary');
+    background-color: map-get($colors, "secondary");
   }
 }
 

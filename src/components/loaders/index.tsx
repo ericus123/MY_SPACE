@@ -9,6 +9,7 @@ const AppLoader = () => {
   return (
     <div
       style={{
+        transition: ".5s ease-in-out",
         background: isDarkMode ? "#161b1e" : "rgb(241, 241, 241)",
         width: "100vw",
         height: "100vh",

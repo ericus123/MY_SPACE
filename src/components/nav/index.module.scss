@@ -1,6 +1,7 @@
-@import '../../styles/variables.module.scss';
+@import "../../styles/variables.module.scss";
 
 .container {
+  transition: 0.5s ease-in-out;
   filter: none;
   display: flex;
   align-items: center;
@@ -38,7 +39,7 @@
       .line {
         max-height: 5px;
         min-height: 5px;
-        background-color: map-get($colors, 'primary');
+        background-color: map-get($colors, "primary");
       }
     }
     .hamburger_open {
@@ -56,9 +57,9 @@
     }
     .logo_container {
       .logo {
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-size: 28px;
-        color: map-get($colors, 'primary');
+        color: map-get($colors, "primary");
         cursor: pointer;
       }
     }
@@ -71,18 +72,19 @@
       justify-content: center;
       .icon {
         justify-content: center;
-        color: map-get($colors, 'primary');
+        color: map-get($colors, "primary");
       }
     }
   }
 }
 
 .light {
+  transition: 0.5s ease-in-out;
   // background-color: map-get($colors, 'light_mode') !important;
   .header {
     .logo_container {
       .logo {
-        color: map-get($colors, 'dark');
+        color: map-get($colors, "dark");
       }
     }
   }
