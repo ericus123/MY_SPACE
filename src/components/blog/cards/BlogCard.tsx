@@ -16,8 +16,7 @@ const BlogCard = ({ blog }: { blog: BlogAttributes }) => {
           rel="preload"
           href={`/blog/${blog.slug}`}
           key={Math.random()}
-          style={{ textDecoration: "none" }}
-        >
+          style={{ textDecoration: "none" }}>
           <CustomImage
             src={image_url}
             alt=""
@@ -25,7 +24,7 @@ const BlogCard = ({ blog }: { blog: BlogAttributes }) => {
             fill
             style={{
               objectFit: "cover",
-              borderRadius: "6px",
+              borderRadius: "6px"
             }}
           />
         </Link>
@@ -35,20 +34,11 @@ const BlogCard = ({ blog }: { blog: BlogAttributes }) => {
         <Link
           href={`/blog/${blog.slug}`}
           key={Math.random()}
-          style={{ textDecoration: "none" }}
-        >
+          style={{ textDecoration: "none" }}>
           <h1 className={styles.title}>{blog?.title}</h1>
         </Link>
         <span className={styles.icon}></span>
       </div>
-      {/* <div className={styles.description_container}>
-        <p className={styles.descripion}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
-      </div> */}
       <div className={styles.tags_container}>
         {blog?.tags?.map((tag) => (
           <div className={styles.tag} key={Math.random()}>

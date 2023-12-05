@@ -9,10 +9,9 @@ const HandEmoji = ({ className }: { className: string }) => {
       whileHover={{ rotate: 45, scale: 1.2 }}
       style={{
         display: "inline-block",
-        fontSize: "1.5rem", // Adjust the font size as needed
-        cursor: "pointer", // Add a cursor style to indicate interactivity
-      }}
-    >
+        fontSize: "1.5rem",
+        cursor: "pointer"
+      }}>
       👋🏾
     </motion.span>
   );

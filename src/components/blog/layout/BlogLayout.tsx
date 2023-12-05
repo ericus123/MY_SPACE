@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import GoToTop from "react-scroll-to-top";
-import AdBanner from "../../components/ads";
-import ProfileCard from "../../components/blog/cards/ProfileCard";
-import SearchPanel from "../../components/blog/search";
-import { RootState } from "../../redux/store";
+import { RootState } from "../../../redux/store";
+import AdBanner from "../../ads";
+import ProfileCard from "../cards/ProfileCard";
+import SearchPanel from "../search";
 import styles from "./index.module.scss";
 
 const BlogLayout = ({ children }: { children: ReactNode }) => {
@@ -36,7 +36,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
         style={{
           right: "20px",
           bottom: "20px",
-          background: isDarkMode ? "gray" : "#161b1e",
+          background: isDarkMode ? "gray" : "#161b1e"
         }}
         color={!isDarkMode ? "gray" : "#161b1e"}
         top={800}

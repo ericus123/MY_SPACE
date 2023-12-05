@@ -16,7 +16,7 @@ const BlogSearchTags = () => {
       <div className={`${styles.tags} `}>
         {[
           "CSS",
-          "C",
+          "C/C++",
           "SCSS",
           "Next",
           "TypeScript",
@@ -25,18 +25,17 @@ const BlogSearchTags = () => {
           "JavaScript",
           "Node",
           "React",
-          "Arduino",
+          "IoT",
           "Security",
           "Nginx",
-          "Database",
+          "Database"
         ].map((tag: string) => (
           <h3
             key={Math.random()}
             className={`${styles.tag} ${
               activeTags.includes(tag) && styles.active_tag
             }`}
-            onClick={() => handleTag(tag)}
-          >
+            onClick={() => handleTag(tag)}>
             {tag}
           </h3>
         ))}

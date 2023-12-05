@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import '../../styles/variables.module.scss';
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../../styles/variables.module.scss";
 
 .app_layout {
-  background-color: map-get($colors, 'dark');
+  background-color: map-get($colors, "dark");
   .wrapper {
     position: relative;
     max-width: 1800px;
@@ -28,116 +28,136 @@
 }
 
 .light {
-  background-color: map-get($colors, 'light_mode') !important;
-  color: map-get($colors, 'dark');
+  background-color: map-get($colors, "light_mode") !important;
+  color: map-get($colors, "dark");
 }
 
 /* fonts */
 
 @font-face {
-  font-family: 'ft-light';
-  src: local('FuturaPTLight'),
-    url('/fonts/FuturaPTLight.otf') format('truetype');
+  font-family: "ft-light";
+  src: local("FuturaPTLight"),
+    url("/fonts/FuturaPTLight.otf") format("truetype");
+  font-display: swap;
 }
 @font-face {
-  font-family: 'ft-light-ob';
-  src: local('FuturaPTLightOblique'),
-    url('/fonts/FuturaPTLightOblique.otf') format('truetype');
+  font-family: "ft-light-ob";
+  src: local("FuturaPTLightOblique"),
+    url("/fonts/FuturaPTLightOblique.otf") format("truetype");
+  font-display: swap;
 }
 @font-face {
-  font-family: 'ft-medium';
-  src: local('FuturaPTMedium'),
-    url('/fonts/FuturaPTMedium.otf') format('truetype');
+  font-family: "ft-medium";
+  src: local("FuturaPTMedium"),
+    url("/fonts/FuturaPTMedium.otf") format("truetype");
+  font-display: swap;
 }
 @font-face {
-  font-family: 'ft-medium-ob';
-  src: local('FuturaPTMediumOblique'),
-    url('/fonts/FuturaPTMediumOblique.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'ft-demi';
-  src: local('FuturaPTDemi'), url('/fonts/FuturaPTDemi.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'ft-demi-ob';
-  src: local('FuturaPTDemiOblique'),
-    url('/fonts/FuturaPTDemiOblique.otf') format('truetype');
+  font-family: "ft-medium-ob";
+  src: local("FuturaPTMediumOblique"),
+    url("/fonts/FuturaPTMediumOblique.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-bold';
-  src: local('FuturaPTBold'), url('/fonts/FuturaPTBold.otf') format('truetype');
+  font-family: "ft-demi";
+  src: local("FuturaPTDemi"), url("/fonts/FuturaPTDemi.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-bold-ob';
-  src: local('FuturaPTBoldOblique'),
-    url('/fonts/FuturaPTBoldOblique.otf') format('truetype');
+  font-family: "ft-demi-ob";
+  src: local("FuturaPTDemiOblique"),
+    url("/fonts/FuturaPTDemiOblique.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-book';
-  src: local('FuturaPTBook'), url('/fonts/FuturaPTBook.otf') format('truetype');
+  font-family: "ft-bold";
+  src: local("FuturaPTBold"), url("/fonts/FuturaPTBold.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-book-ob';
-  src: local('FuturaPTBookOblique'),
-    url('/fonts/FuturaPTBookOblique.otf') format('truetype');
+  font-family: "ft-bold-ob";
+  src: local("FuturaPTBoldOblique"),
+    url("/fonts/FuturaPTBoldOblique.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-cond-bold';
-  src: local('FuturaPTCondBold'),
-    url('/fonts/FuturaPTCondBold.otf') format('truetype');
-}
-@font-face {
-  font-family: 'ft-cond-bold-ob';
-  src: local('FuturaPTCondBoldOblique'),
-    url('/fonts/FuturaPTCondBoldOblique.otf') format('truetype');
-}
-@font-face {
-  font-family: 'ft-cond-extra-bold';
-  src: local('FuturaPTConExtradBold'),
-    url('/fonts/FuturaPTCondExtraBold.otf') format('truetype');
-}
-@font-face {
-  font-family: 'ft-cond-extra-bold-ob';
-  src: local('FuturaPTCondExtraBoldOblique'),
-    url('/fonts/FuturaPTCondExtraBoldOblique.otf') format('truetype');
+  font-family: "ft-book";
+  src: local("FuturaPTBook"), url("/fonts/FuturaPTBook.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-cond-medium';
-  src: local('FuturaPTCondMedium'),
-    url('/fonts/FuturaPTCondMedium.otf') format('truetype');
-}
-@font-face {
-  font-family: 'ft-cond-medium-ob';
-  src: local('FuturaPTCondMediumOblique'),
-    url('/fonts/FuturaPTCondMediumOblique.otf') format('truetype');
-}
-@font-face {
-  font-family: 'ft-cond-book';
-  src: local('FuturaPTCondBook'),
-    url('/fonts/FuturaPTCondBook.otf') format('truetype');
-}
-@font-face {
-  font-family: 'ft-cond-book-ob';
-  src: local('FuturaPTCondBookOblique'),
-    url('/fonts/FuturaPTCondBookOblique.otf') format('truetype');
+  font-family: "ft-book-ob";
+  src: local("FuturaPTBookOblique"),
+    url("/fonts/FuturaPTBookOblique.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-heavy';
-  src: local('FuturaPTHeavy'),
-    url('/fonts/FuturaPTHeavy.otf') format('truetype');
+  font-family: "ft-cond-bold";
+  src: local("FuturaPTCondBold"),
+    url("/fonts/FuturaPTCondBold.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ft-cond-bold-ob";
+  src: local("FuturaPTCondBoldOblique"),
+    url("/fonts/FuturaPTCondBoldOblique.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ft-cond-extra-bold";
+  src: local("FuturaPTConExtradBold"),
+    url("/fonts/FuturaPTCondExtraBold.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ft-cond-extra-bold-ob";
+  src: local("FuturaPTCondExtraBoldOblique"),
+    url("/fonts/FuturaPTCondExtraBoldOblique.otf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ft-heavy-ob';
-  src: local('FuturaPTHeavyOblique'),
-    url('/fonts/FuturaPTHeavyOblique.otf') format('truetype');
+  font-family: "ft-cond-medium";
+  src: local("FuturaPTCondMedium"),
+    url("/fonts/FuturaPTCondMedium.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ft-cond-medium-ob";
+  src: local("FuturaPTCondMediumOblique"),
+    url("/fonts/FuturaPTCondMediumOblique.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ft-cond-book";
+  src: local("FuturaPTCondBook"),
+    url("/fonts/FuturaPTCondBook.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ft-cond-book-ob";
+  src: local("FuturaPTCondBookOblique"),
+    url("/fonts/FuturaPTCondBookOblique.otf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ft-heavy";
+  src: local("FuturaPTHeavy"),
+    url("/fonts/FuturaPTHeavy.otf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ft-heavy-ob";
+  src: local("FuturaPTHeavyOblique"),
+    url("/fonts/FuturaPTHeavyOblique.otf") format("truetype");
+  font-display: swap;
 }

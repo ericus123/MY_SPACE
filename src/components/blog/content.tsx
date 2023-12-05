@@ -20,7 +20,7 @@ const BlogContent = ({ content }: { content: string }) => {
     // });
   }, []);
 
-  return <div>{ReactHtmlParser(content)}</div>; 
+  return <div>{ReactHtmlParser(content)}</div>;
 };
 
 export default BlogContent;

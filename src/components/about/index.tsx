@@ -15,9 +15,8 @@ const AboutPage = () => {
           style={{
             width: "7.5rem",
             height: "7.5rem",
-            position: "relative",
-          }}
-        >
+            position: "relative"
+          }}>
           <Image
             src={images.profile_new}
             alt=""
@@ -32,9 +31,8 @@ const AboutPage = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: ".2rem",
-          }}
-        >
+            gap: ".2rem"
+          }}>
           <HandEmoji className={styles.handEmoji} />
           <h2 className={styles.introduction}> Hi,I&apos;m Amani</h2>
         </div>
@@ -46,8 +44,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className={styles.titles}>
-          Fullstack Engineer <span className={styles.separator}>|</span> IoT
-          <span className={styles.separator}>|</span> DAPP
+          Fullstack Engineer <span className={styles.separator}> | </span> IoT
         </div>
         <div className={styles.connect}>
           <a
@@ -55,8 +52,7 @@ const AboutPage = () => {
             href={process.env.NEXT_PUBLIC_RESUME}
             rel="noopener noreferrer"
             target="_blank"
-            className={styles.link}
-          >
+            className={styles.link}>
             <button className={styles.btn}>Resume</button>
           </a>
         </div>

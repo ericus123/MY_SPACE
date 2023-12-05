@@ -11,18 +11,18 @@ const About = () => {
         <title>About - AMANI Eric</title>
         <meta
           name="description"
-          content="Crafting Great Digital Products And Xperiences. Fullstack Engineer | IoT | DAPP"
+          content="Crafting Great Digital Products And Xperiences. Fullstack Engineer | IoT"
         />
         <meta
           name="keywords"
-          content="Amani, Fullstack Engineer, IoT, Internet of Things, DAPP, Decentralized Applications"
+          content="Amani, Fullstack Engineer, IoT, Internet of Things, Decentralized Applications"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About - AMANI Eric" />
         <meta
           property="og:description"
-          content="Crafting Great Digital Products And Xperiences. Fullstack Engineer | IoT | DAPP"
+          content="Crafting Great Digital Products And Xperiences. Fullstack Engineer | IoT"
         />
         <meta property="og:image" content={pro_image} />
         <meta property="og:url" content="https://amanieric.com/about" />
@@ -32,7 +32,7 @@ const About = () => {
         <meta name="twitter:title" content="About - AMANI Eric" />
         <meta
           name="twitter:description"
-          content="Crafting Great Digital Products And Xperiences. Fullstack Engineer | IoT | DAPP"
+          content="Crafting Great Digital Products And Xperiences. Fullstack Engineer | IoT"
         />
         <meta name="twitter:image" content={pro_image} />
         <meta name="twitter:url" content="https://amanieric.com/about" />

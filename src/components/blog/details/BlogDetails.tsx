@@ -2,8 +2,8 @@ import { dateToTimeStamp } from "@/helpers";
 import Image from "next/image";
 import Moment from "react-moment";
 import { useSelector } from "react-redux";
-import BlogContent from "../../../pages/blog/[slug]/content";
 import { RootState } from "../../../redux/store";
+import BlogContent from "../content";
 // import BlogComponent from './BlogComponent';
 import readingTime from "reading-time";
 import { images } from "../../../constants/images";
@@ -36,12 +36,12 @@ const BlogDetails = ({ blog, id }: { blog: BlogAttributes; id: string }) => {
         <div className={styles.left}>
           <CustomImage
             className={styles.image}
-            src={images.profile}
+            src={images.profile_new}
             alt=""
             fill
             style={{
-              filter: "grayscale(100%)",
-              objectFit: "cover",
+              // filter: "grayscale(100%)",
+              objectFit: "cover"
             }}
           />
         </div>

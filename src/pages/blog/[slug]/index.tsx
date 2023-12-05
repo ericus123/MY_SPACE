@@ -1,9 +1,9 @@
 import axios from "axios";
 import Head from "next/head";
 import BlogDetails from "../../../components/blog/details/BlogDetails";
+import BlogLayout from "../../../components/blog/layout/BlogLayout";
 import { BlogAttributes } from "../../../types/Blog";
 import { MetaData } from "../../../types/MetaData";
-import BlogLayout from "../BlogLayout";
 
 export const getServerSideProps = async (context: {
   params: { slug: any };
@@ -13,7 +13,7 @@ export const getServerSideProps = async (context: {
 
   const headers = {
     "content-type": "application/json",
-    Authorization: `Bearer`,
+    Authorization: `Bearer`
   };
 
   const requestBody = {
@@ -48,17 +48,17 @@ export const getServerSideProps = async (context: {
     variables: {
       filters: {
         slug: {
-          eq: slug,
-        },
+          eq: slug
+        }
       },
-      state: "LIVE",
-    },
+      state: "LIVE"
+    }
   };
   const options = {
     method: "POST",
     url,
     headers,
-    data: requestBody,
+    data: requestBody
   };
   const response = await axios(options);
 
@@ -66,8 +66,8 @@ export const getServerSideProps = async (context: {
     return {
       redirect: {
         permanent: true,
-        destination: "/404",
-      },
+        destination: "/404"
+      }
     };
   }
 
@@ -81,7 +81,7 @@ export const getServerSideProps = async (context: {
         blog?.content?.replace(/(<([^>]+)>)/gi, "").substr(0, 250) + "...",
       url: `${frontendURL}/blog/${slug}`,
       image: image_url,
-      type: "website",
+      type: "website"
     },
     twitter: {
       card: "summary_large_image",
@@ -90,8 +90,8 @@ export const getServerSideProps = async (context: {
       description:
         blog?.content?.replace(/(<([^>]+)>)/gi, "").substr(0, 250) + "...",
       url: `${frontendURL}/blog/${slug}`,
-      image: image_url,
-    },
+      image: image_url
+    }
   };
 
   return {
@@ -99,8 +99,8 @@ export const getServerSideProps = async (context: {
       blog: response.data.data.blogs.data[0].attributes,
       id: response.data.data.blogs.data[0].id,
       slug: slug,
-      meta,
-    },
+      meta
+    }
   };
 };
 
@@ -108,7 +108,7 @@ const BlogPost = ({
   blog,
   id,
   slug,
-  meta,
+  meta
 }: {
   blog: BlogAttributes;
   id: string;

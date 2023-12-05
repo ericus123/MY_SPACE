@@ -9,7 +9,8 @@ const AdBanner = (
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (err: any) {
-      throw new Error(err);
+      // throw new Error(err);
+      console.log(err);
     }
   }, []);
 
@@ -18,9 +19,9 @@ const AdBanner = (
       className="adsbygoogle adbanner-customize"
       style={{
         display: "block",
-        overflow: "hidden",
+        overflow: "hidden"
       }}
-      data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}
+      data-ad-client={`ca-${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
       {...props}
     />
   );
