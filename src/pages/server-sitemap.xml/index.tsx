@@ -6,21 +6,23 @@ export const getServerSideProps = async (ctx: any) => {
   const baseUrl = process.env.NEXT_PUBLIC_FRONTEND_URL;
 
   const headers = {
-    "content-type": "application/json",
+    "content-type": "application/json"
   };
   const requestBody = {
     query: `query{
-        blogs{
+        blogs(pagination:{
+          limit: 10000
+        }){
             data{
               id
                 attributes {
                     title
-                    content,
-                  tags,
-                  createdAt,
-                  updatedAt,
-                  slug,
-                  publishedAt,
+                    content
+                  tags
+                  createdAt
+                  updatedAt
+                  slug
+                  publishedAt
                   content
                   image {
                   data {
@@ -33,13 +35,13 @@ export const getServerSideProps = async (ctx: any) => {
                 }
             }
         }
-    }`,
+    }`
   };
   const options = {
     method: "POST",
     url,
     headers,
-    data: requestBody,
+    data: requestBody
   };
 
   const response = await axios(options);
@@ -51,7 +53,7 @@ export const getServerSideProps = async (ctx: any) => {
       (blog: { attributes: { slug: any; updatedAt: any } }) => ({
         loc: `${baseUrl}/blog/${blog.attributes.slug}`,
         lastmod: blog.attributes.updatedAt,
-        changefreq: "daily",
+        changefreq: "daily"
       })
     );
   }

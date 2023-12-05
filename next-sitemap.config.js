@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: "http://localhost:4200" || 'https://amanieric.com',
+    siteUrl: process.env.NEXT_PUBLIC_FRONTEND_URL,
     generateRobotsTxt: true,
 }

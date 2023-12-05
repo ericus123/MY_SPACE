@@ -1,4 +1,4 @@
-const siteUrl = "https://amanieric.com";
+const siteUrl = process.env.NEXT_PUBLIC_FRONTEND_URL;
 
 // eslint-disable-next-line no-undef
 const sitemap = {
@@ -8,13 +8,13 @@ const sitemap = {
     policies: [
       {
         userAgent: "*",
-        disallow: ["404"],
+        disallow: ["404"]
       },
-      { userAgent: "*", allow: "/" },
+      { userAgent: "*", allow: "/" }
     ],
-    additionalSitemaps: [`${siteUrl}/server-sitemap.xml`],
+    additionalSitemaps: [`${siteUrl}/server-sitemap.xml`]
   },
-  exclude: ["404"],
+  exclude: ["404"]
 };
 
 export default sitemap;
