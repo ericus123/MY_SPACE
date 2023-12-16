@@ -16,22 +16,21 @@ const AppLoader = () => {
         zIndex: 999,
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+        alignItems: "center"
+      }}>
       <Motion.img
         src={isDarkMode ? images.logo : images.logoDark}
         alt="Logo"
         style={{ width: 80, height: 80 }}
         animate={{
           opacity: [1, 0.7, 1, 0.7, 1],
-          scale: [1, 1.1, 1.2, 1.1, 1],
+          scale: [1, 1.1, 1.2, 1.1, 1]
         }}
         transition={{
           duration: 1,
           repeat: Infinity,
           repeatType: "mirror",
-          ease: "easeInOut",
+          ease: "easeInOut"
         }}
       />
     </div>

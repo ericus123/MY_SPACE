@@ -1,6 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
 import Script from "next/script";
-import GoogleAdsRecoveryMessage from "../components/ads/GoogleAdsRecoveryMessage";
 
 export default function Document() {
   return (
@@ -12,13 +11,13 @@ export default function Document() {
           content="CSS, C, SCSS, Next,TypeScript, Electronics, HTML, JavaScript, Node, React,Arduino, Security, Nginx,Database"
         />
         <meta name="author" content="AMANI Eric" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
           strategy="lazyOnload"
           crossOrigin="anonymous"
         />
-        <GoogleAdsRecoveryMessage />
       </Head>
       <body>
         <Main />
