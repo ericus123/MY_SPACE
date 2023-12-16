@@ -4,7 +4,6 @@ import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { images } from "../../../constants/images";
 import { RootState } from "../../../redux/store";
-import OpenForHire from "../hire/Hire";
 import styles from "./index.module.scss";
 
 const ProfileCard = () => {
@@ -86,12 +85,12 @@ const ProfileCard = () => {
           </div>
         </FadeIn>
       </div>
-      <div
+      {/* <div
         style={{
           marginTop: "40px"
         }}>
         <OpenForHire />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -6,7 +6,12 @@ import { withUrqlClient } from "next-urql";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
-import { useEffect, useState } from "react";
+import {
+  ClassAttributes,
+  MetaHTMLAttributes,
+  useEffect,
+  useState
+} from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import AppLoader from "../components/loaders";
@@ -62,8 +67,16 @@ const App = ({ Component, pageProps }: any) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {meta.map(
+          (
+            og: JSX.IntrinsicAttributes &
+              ClassAttributes<HTMLMetaElement> &
+              MetaHTMLAttributes<HTMLMetaElement>
+          ) => (
+            <meta {...og} key={og.key} />
+          )
+        )}
       </Head>
-
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           {isLoading ? (
@@ -71,7 +84,7 @@ const App = ({ Component, pageProps }: any) => {
           ) : (
             <AppLayout>
               <Component {...pageProps} />
-              <Analytics/>
+              <Analytics />
             </AppLayout>
           )}
         </PersistGate>
@@ -82,5 +95,5 @@ const App = ({ Component, pageProps }: any) => {
 
 export default withUrqlClient((_ssrExchange, ctx) => ({
   url: `${process.env.NEXT_PUBLIC_GRAPHQL_URI}`,
-  exchanges: [cacheExchange, _ssrExchange, fetchExchange],
+  exchanges: [cacheExchange, _ssrExchange, fetchExchange]
 }))(App);

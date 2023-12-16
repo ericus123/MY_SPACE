@@ -16,8 +16,8 @@ export const getServerSideProps = async () => {
     "content-type": "application/json"
   };
   const requestBody = {
-    query: `query ($state: PublicationState, $sort: [String]){
-      blogs(publicationState: $state, sort: $sort){
+    query: `query ($state: PublicationState, $sort: [String], $pagination: PaginationArg){
+      blogs(publicationState: $state, sort: $sort, pagination: $pagination){
               data{
                 id
                   attributes {
@@ -43,7 +43,10 @@ export const getServerSideProps = async () => {
     }`,
     variables: {
       state: "LIVE",
-      sort: ["createdAt:desc"]
+      sort: ["createdAt:desc"],
+      pagination: {
+        limit: 1000
+      }
     }
   };
   const options = {

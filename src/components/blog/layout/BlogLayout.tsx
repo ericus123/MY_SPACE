@@ -17,9 +17,35 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className={styles.blog_layout}>
-      <div className={styles.top_side}>
-        {router.route == "/blog" && <SearchPanel />}
-      </div>
+      {router.route == "/blog" ? (
+        <div className={styles.top_side}>
+          <div
+            style={
+              {
+                // border: "1px solid red"
+              }
+            }>
+            <AdBanner
+              data-ad-slot="7434970023"
+              data-ad-format="fluid"
+              data-full-width-responsive="true"
+            />
+          </div>
+          <SearchPanel />
+          <div
+            style={
+              {
+                // border: "1px solid yellow"
+              }
+            }>
+            <AdBanner
+              data-ad-slot="7434970023"
+              data-ad-format="fluid"
+              data-full-width-responsive="true"
+            />
+          </div>
+        </div>
+      ) : null}
 
       <div className={styles.bottom_side}>
         {children}
@@ -27,7 +53,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
         <ProfileCard />
         <AdBanner
           data-ad-slot="7434970023"
-          data-ad-format="auto"
+          data-ad-format="fluid"
           data-full-width-responsive="true"
         />
       </div>
