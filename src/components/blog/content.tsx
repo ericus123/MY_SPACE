@@ -6,6 +6,7 @@ const CopyButtonPlugin = require("highlightjs-copy");
 
 import { useEffect } from "react";
 
+//@ts-nocheck
 const BlogContent = ({ content }: { content: string }) => {
   useEffect(() => {
     hljs.initHighlighting();
@@ -19,7 +20,8 @@ const BlogContent = ({ content }: { content: string }) => {
     //   });
     // });
   }, []);
-
+//@ts-ignore
+//@ts-nocheck
   return <div>{ReactHtmlParser(content)}</div>;
 };
 

@@ -12,7 +12,7 @@ interface INavProps {
 
 // Initial state
 const initialState: INavProps = {
-    isDarkMode: false,
+    isDarkMode: true,
     active: navItems[0]?.key || "about",
     scrollValue: 0,
     isMenuOpen: false

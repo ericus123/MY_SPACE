@@ -62,6 +62,17 @@ export const skills = [
 
 export const experience = [
   {
+    place: "Allan & Gill Gray Foundation",
+    role: "Software Engineer",
+    timeline: "May 2024 - Present",
+    responsibilities: [
+      "Designs, develops, tests, and deploys software solutions, ensuring high performance and integration across various platforms.",
+      "Manages and optimizes Amazon Web Services infrastructure, including servers, load balancers, databases, and cloud storage, to support seamless application functionality and scalability.",
+      "Identifies, troubleshoots, and resolves software bugs and performance bottlenecks, enhancing system reliability and efficiency.",
+      "Documents technical specifications and functional requirements, collaborates with product owners and teams to plan agile development sprints, and seamlessly integrates third-party services like Hubspot into existing applications."
+    ]
+  },
+  {
     place: "HAPPYMONK.AI",
     role: "Fullstack Engineer",
     timeline: "Apr 2022 - March 2024",
