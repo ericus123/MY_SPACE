@@ -2,6 +2,7 @@ import "@/styles/global.css";
 import "@/styles/highlight.scss";
 import { cacheExchange, fetchExchange } from "@urql/core";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { withUrqlClient } from "next-urql";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -77,6 +78,7 @@ const App = ({ Component, pageProps }: any) => {
           )
         )}
       </Head>
+      <SpeedInsights />
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           {isLoading ? (
